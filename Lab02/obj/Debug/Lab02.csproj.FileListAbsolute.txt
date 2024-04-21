@@ -1,0 +1,80 @@
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\pixel.hlsl
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\vertex.hlsl
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.exe
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Diagnostics.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Diagnostics.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.xml
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.Properties.Resources.resources
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.GenerateResource.cache
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.CopyComplete
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.exe
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.xml
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\textureTetrahedron.png
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.dll
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\pixel.hlsl
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\textureTetrahedron.png
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\vertex.hlsl
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.exe.config
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.exe
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Diagnostics.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.dll
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.D3DCompiler.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Desktop.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Diagnostics.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct2D1.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Direct3D11.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DirectInput.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.DXGI.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.pdb
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\bin\Debug\SharpDX.Mathematics.xml
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.SuggestedBindingRedirects.cache
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.Properties.Resources.resources
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.GenerateResource.cache
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.CopyComplete
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.exe
+C:\универ\5 семестр\ПГиЗ\Lab02\Lab02\obj\Debug\Lab01.pdb
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\Lab01.exe.config
+C:\универ\ПГиЗ\Lab02\Lab02\obj\Debug\Lab02.csproj.SuggestedBindingRedirects.cache
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\plotTexture.png
+C:\универ\ПГиЗ\Lab02\Lab02\bin\Debug\tetrahedronchik.png
