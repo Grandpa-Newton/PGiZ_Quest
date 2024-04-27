@@ -139,6 +139,8 @@ namespace QuestGame
         private static SourceVoice sourceVoice;
         private static AudioBuffer audioBuffer;
         private float _playerSpeed = 1f;
+        private Texture _islandTexture;
+        private MeshObject _island;
 
         private void CreatingObjects()
         {
@@ -309,7 +311,36 @@ namespace QuestGame
             // если хочу подвинуть на isoX вправо и на isoY влево, то нужно двигать:
             // по x: на (2 * isoY + isoX) / 2;
             // по y: на (2 * isoY - isoX) / 2;
-            _plot = loader.MakePlot(new Vector4(0.0f, 0.0f, 0.0f, 1.0f), 0.0f, 0.0f, 0.0f, _plotSize.X, _plotSize.Y, -1f);
+            //_plot = loader.MakePlot(new Vector4(0.0f, 0.0f, 0.0f, 1.0f), 0.0f, 0.0f, 0.0f, _plotSize.X, _plotSize.Y, -1f);
+
+
+            
+            
+            /*var objLoaderFactory = new ObjLoaderFactory();
+            var objLoader = objLoaderFactory.Create();
+
+            var fileStream = new FileStream("mainCharacter.obj", FileMode.Open);
+            var result = objLoader.Load(fileStream);*/
+
+            objLoaderFactory = new ObjLoaderFactory();
+            objLoader = objLoaderFactory.Create();
+
+            fileStream = new FileStream("water.obj", FileMode.Open);
+            result = objLoader.Load(fileStream);
+
+
+            _plot = loader.LoadMeshObjectFromObjFile(result, new Vector4(0.0f, 0.0f, 0.0f, 1.0f), 0.0f, 0.0f, 0.0f,
+                ref _plotTexture, _renderer.AnisotropicSampler, 0.3f);
+            
+            objLoaderFactory = new ObjLoaderFactory();
+            objLoader = objLoaderFactory.Create();
+
+            fileStream = new FileStream("island3.obj", FileMode.Open);
+            result = objLoader.Load(fileStream);
+
+
+            _island = loader.LoadMeshObjectFromObjFile(result, new Vector4(0.0f, 0.01f, 0.0f, 1.0f), 0.0f, 0.0f, 0.0f,
+                ref _islandTexture, _renderer.AnisotropicSampler, 0.7f);
             
             _camera = new Camera(new Vector4( -10.0f, 8.25f, -10.0f, 1.0f));
             _timeHelper = new TimeHelper();
@@ -405,6 +436,7 @@ namespace QuestGame
 
             _renderForm.WindowState = FormWindowState.Maximized;
         }
+
 
         void PLaySoundFile(XAudio2 device, string text, string fileName)
         {
@@ -606,7 +638,13 @@ namespace QuestGame
             _renderer.UpdatePerObjectConstantBuffers(_secondNpcObject.GetWorldMatrix(), viewMatrix, projectionMatrix);
             _renderer.SetTexture(_npcTexture);
             _renderer.RenderMeshObject(_secondNpcObject);
+            
+            _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
+            _renderer.UpdatePerObjectConstantBuffers(_island.GetWorldMatrix(), viewMatrix, projectionMatrix);
+            _renderer.SetTexture(_islandTexture);
+            _renderer.RenderMeshObject(_island);
 
+            
             _renderer.SetPerObjectConstantBuffer(_floorMaterial);
             _renderer.UpdatePerObjectConstantBuffers(_plot.GetWorldMatrix(), viewMatrix, projectionMatrix);
             _renderer.SetTexture(_plotTexture);

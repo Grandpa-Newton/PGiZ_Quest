@@ -1,0 +1,12 @@
+# Blender 4.1.1 MTL File: 'myBeautifulIsland.blend'
+# www.blender.org
+
+newmtl Sand
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.431818 0.431818 0.431818
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ivang/Downloads/desert_sand_texture_by_jb1992_d5cgqi1.jpg

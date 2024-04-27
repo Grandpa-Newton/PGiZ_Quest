@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ObjLoader.Loader.Common;
 using ObjLoader.Loader.Loaders;
 using SharpDX;
 using SharpDX.DXGI;
@@ -79,7 +80,7 @@ namespace QuestGame
 
         }
         
-        public MeshObject LoadMeshObjectFromObjFile(LoadResult loadResult, Vector4 position, float yaw, float pitch, float roll, ref Texture texture, SamplerState sampler)
+        public MeshObject LoadMeshObjectFromObjFile(LoadResult loadResult, Vector4 position, float yaw, float pitch, float roll, ref Texture texture, SamplerState sampler, float sizeMultiplier = 1f)
         {
             var currentGroup = loadResult.Groups[0];
 
@@ -91,15 +92,27 @@ namespace QuestGame
             {
                 for (int i = face.Count - 1; i >= 0; i--)
                 {
-                    var vertexPosition = loadResult.Vertices[face[i].VertexIndex - 1];
-                    //var texturePosition = loadResult.Textures[face[i].TextureIndex - 1];
+                    var vertexPosition = loadResult.Vertices[face[i].VertexIndex - 1] ;
+                    ObjLoader.Loader.Data.VertexData.Texture texturePosition;
+                    if (loadResult.Textures.Count == 0)
+                    {
+                        Random random = new Random();
+                        texturePosition =
+                            new ObjLoader.Loader.Data.VertexData.Texture(random.NextFloat(0f, 1f),
+                                random.NextFloat(0f, 1f));
+                    }
+                    else
+                    {
+                        texturePosition = loadResult.Textures[face[i].TextureIndex - 1];
+                    }
+                        
                     var normalPosition = loadResult.Normals[face[i].NormalIndex - 1];
-                    Random random = new Random();
+                    //
                     vertices.Add(new Renderer.VertexDataStruct
                     {
-                        Position = new Vector4(vertexPosition.X, vertexPosition.Y, vertexPosition.Z, 1.0f),
-                        //Tex0 = new Vector2(texturePosition.X, 1.0f - texturePosition.Y),
-                        Tex0 = new Vector2(random.NextFloat(0f, 1f), random.NextFloat(0f, 1f)),
+                        Position = new Vector4(vertexPosition.X * sizeMultiplier, vertexPosition.Y * sizeMultiplier, vertexPosition.Z * sizeMultiplier, 1.0f),
+                        Tex0 = new Vector2(texturePosition.X, 1.0f - texturePosition.Y),
+                        //Tex0 = new Vector2(random.NextFloat(0f, 1f), random.NextFloat(0f, 1f)),
                         Normal = new Vector4(normalPosition.X, normalPosition.Y, normalPosition.Z, 1.0f)
                     });
                 }
@@ -110,7 +123,8 @@ namespace QuestGame
                 indices.Add((uint)i);
             }
 
-            //texture = LoadTextureFromFile(currentGroup.Material.DiffuseTextureMap, sampler);
+            if(loadResult.Textures.Count != 0)
+                texture = LoadTextureFromFile(currentGroup.Material.DiffuseTextureMap, sampler);
 
             return new MeshObject(_directX3DGraphics, position, yaw, pitch, roll, vertices.ToArray(), indices.ToArray());
         }

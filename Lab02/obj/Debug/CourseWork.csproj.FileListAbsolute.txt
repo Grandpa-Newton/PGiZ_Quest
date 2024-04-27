@@ -67,3 +67,11 @@ C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\SharpDX.XAudio2.dll
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\SharpDX.XAudio2.pdb
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\SharpDX.XAudio2.xml
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\backgroundmusic.wav
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\island.mtl
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\island.obj
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\water.mtl
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\water.obj
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\newIsland.mtl
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\newIsland.obj
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\island3.mtl
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\island3.obj
