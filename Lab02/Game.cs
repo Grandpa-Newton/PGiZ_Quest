@@ -17,6 +17,7 @@ using SharpDX.DirectWrite;
 using SharpDX.IO;
 using SharpDX.WIC;
 using System.IO.Packaging;
+using System.Windows.Forms;
 using ObjLoader.Loader.Loaders;
 using SharpDX.Multimedia;
 using SharpDX.XAudio2;
@@ -137,6 +138,7 @@ namespace QuestGame
         private XAudio2 xaudio2;
         private static SourceVoice sourceVoice;
         private static AudioBuffer audioBuffer;
+        private float _playerSpeed = 1f;
 
         private void CreatingObjects()
         {
@@ -278,7 +280,7 @@ namespace QuestGame
                 }, new []
                 {
                     treasureItem
-                });
+                }, new PlayerBoost(20f, 2));
             
             CollectibleItem bananaItem = new CollectibleItem(new Sprite(_directX3DGraphics,
                 DirectX3DGraphics.LoadFromFile(_directX3DGraphics.D2DRenderTarget, "bananaPeel.png"), Vector2.Zero, 0f,
@@ -401,6 +403,7 @@ namespace QuestGame
 
             PLaySoundFile(xaudio2, "aa", "backgroundMusic.wav");
 
+            _renderForm.WindowState = FormWindowState.Maximized;
         }
 
         void PLaySoundFile(XAudio2 device, string text, string fileName)
@@ -558,7 +561,7 @@ namespace QuestGame
             playerMovement.Normalize();
             playerMovement = ToDecart(playerMovement);
             
-            playerMovement *= _timeHelper.DeltaT;
+            playerMovement *= _timeHelper.DeltaT * _playerSpeed;
             
             _player.MoveBy(playerMovement.X, playerMovement.Y, playerMovement.Z);
             _playerCollider.Minimum += playerMovement;
@@ -635,38 +638,50 @@ namespace QuestGame
 
         private void DrawHUD()
         {
-            testTextFormat = new TextFormat(_directX3DGraphics.FactoryDWrite, "Calibri", 28)
-            {
-                TextAlignment = SharpDX.DirectWrite.TextAlignment.Center,
-                ParagraphAlignment = ParagraphAlignment.Center,
-            };
+                testTextFormat = new TextFormat(_directX3DGraphics.FactoryDWrite, "Calibri", 28)
+                {
+                    TextAlignment = SharpDX.DirectWrite.TextAlignment.Center,
+                    ParagraphAlignment = ParagraphAlignment.Center,
+                };
 
-            _directX3DGraphics.D2DRenderTarget.TextAntialiasMode = SharpDX.Direct2D1.TextAntialiasMode.Cleartype;
-            //= new TextLayout(_directX3DGraphics.FactoryDWrite, $"NPC:{_firstNpcCollider.Center},\n\r Player:{_playerCollider.Center}", testTextFormat, _renderForm.Width, _renderForm.Height);
+                _directX3DGraphics.D2DRenderTarget.TextAntialiasMode = SharpDX.Direct2D1.TextAntialiasMode.Cleartype;
+                //= new TextLayout(_directX3DGraphics.FactoryDWrite, $"NPC:{_firstNpcCollider.Center},\n\r Player:{_playerCollider.Center}", testTextFormat, _renderForm.Width, _renderForm.Height);
 
-            _directX3DGraphics.D2DRenderTarget.BeginDraw();
+                _directX3DGraphics.D2DRenderTarget.BeginDraw();
 
-            if (_isOpenCollectibleItems)
-            {
-                _directX3DGraphics.D2DRenderTarget.FillRectangle(new SharpDX.Mathematics.Interop.RawRectangleF(0f, 0f, _renderForm.Width, _renderForm.Height), _blackBrush); // рамка карты
-                _collectiblesInventory.DrawInventory();
-            }
-            else
-            {
-                _mainInventory.DrawInventory();
-            }
+                if (_isOpenCollectibleItems)
+                {
+                    _directX3DGraphics.D2DRenderTarget.FillRectangle(new SharpDX.Mathematics.Interop.RawRectangleF(0f, 0f, _renderForm.Width, _renderForm.Height), _blackBrush); // рамка карты
+                    _collectiblesInventory.DrawInventory();
+                }
+                else
+                {
+                    _mainInventory.DrawInventory();
+                }
 
-            if (_isDisplayingText)
-            {
-                //textLayoutText = (_secondNpcSequentialQuest.InteractableObjects[0].MeshCollider.Center).ToString() + _player.Position;
-                _textLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, textLayoutText, testTextFormat, _renderForm.Width, _renderForm.Height);
-                _directX3DGraphics.D2DRenderTarget.DrawTextLayout(new RawVector2(_renderForm.Width / 2 - 400, _renderForm.Height / 2 - 100), _textLayout, _whiteBrush, DrawTextOptions.None);
-            }
+                if (_isDisplayingText)
+                {
+                    //textLayoutText = (_secondNpcSequentialQuest.InteractableObjects[0].MeshCollider.Center).ToString() + _player.Position;
+                    _textLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, textLayoutText, testTextFormat, _renderForm.Width, _renderForm.Height);
+                    _directX3DGraphics.D2DRenderTarget.DrawTextLayout(new RawVector2(_renderForm.Width / 2 - 400, _renderForm.Height / 2 - 100), _textLayout, _whiteBrush, DrawTextOptions.None);
+                }
 
-            _directX3DGraphics.D2DRenderTarget.EndDraw();
-            _directX3DGraphics.SwapChain.Present(0, PresentFlags.None);
+                _directX3DGraphics.D2DRenderTarget.EndDraw();
+                
+                _directX3DGraphics.SwapChain.Present(0, PresentFlags.None);
+                
+            
         }
 
+        private void UsePlayerBoost(PlayerBoost playerBoost)
+        {
+            _playerSpeed *= playerBoost.SpeedMultiplier;
+            for (int i = 0; i < playerBoost.InventoryExpansion; i++)
+            {
+                _mainInventory.ExpanseInventory();
+            }
+            //_mainInventory.AddItem();
+        }
         private void InteractWithNpc(KeyValuePair<BoundingBox, Npc> npc)
         {
             _isDisplayingText = true;
@@ -692,6 +707,13 @@ namespace QuestGame
                     {
                         _collectiblesInventory.AddItem(collectibles[i]);
                     }
+                }
+
+                var playerBoost = npcResponse.PlayerBoost;
+
+                if (playerBoost != null)
+                {
+                    UsePlayerBoost(playerBoost);
                 }
 
                 npcSpeed = ToDecart(new Vector3(0f, 0.0001f, 0f));

@@ -28,6 +28,8 @@ namespace Lab01
 
         private float _defaultBoxScale;
 
+        public Vector2 CenterPosition;
+
 
         public InventoryItem(DirectX3DGraphics directX3DGraphics, T item, Vector2 centerPosition, float angle, Vector2 defaultSize, float defaultBoxScale = 1f, float defaultItemScale = 1f)
         {
@@ -60,6 +62,8 @@ namespace Lab01
                 defaultSize, 2.5f * defaultBoxScale);
 
             _defaultBoxScale = defaultBoxScale;
+
+            CenterPosition = centerPosition;
         }
 
         public void DrawInventoryItem()

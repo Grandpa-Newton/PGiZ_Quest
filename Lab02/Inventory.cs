@@ -15,7 +15,7 @@ namespace Lab01
 {
     internal class Inventory<T> where T : Item
     {
-        private InventoryItem<T>[] _inventoryItems;
+        private List<InventoryItem<T>> _inventoryItems;
 
         private DirectX3DGraphics _directX3DGraphics;
 
@@ -27,6 +27,8 @@ namespace Lab01
 
         public bool IsFull;
 
+        private SharpDX.Vector2 _lastPosition;
+
         public Inventory(DirectX3DGraphics directX3DGraphics, DXInput dxInput, InventoryItem<T>[] inventoryItems)
         {
             _directX3DGraphics = directX3DGraphics;
@@ -35,7 +37,7 @@ namespace Lab01
 
             _renderForm = _directX3DGraphics.RenderForm;
 
-            _inventoryItems = inventoryItems;
+            _inventoryItems = inventoryItems.ToList();
 
             for (int i = 0; i < inventoryItems.Length; i++)
             {
@@ -44,6 +46,8 @@ namespace Lab01
                     IsFull = true;
                 }
             }
+
+            _lastPosition = inventoryItems[inventoryItems.Length - 1].CenterPosition;
 
         }
 
@@ -60,6 +64,13 @@ namespace Lab01
 
             return null;
         }
+
+        public void ExpanseInventory()
+        {
+            _inventoryItems.Add(new InventoryItem<T>(_directX3DGraphics, null, _lastPosition + new SharpDX.Vector2(100, 0), 
+                0f, new SharpDX.Vector2(800, 600))); //TODO сделать какой-то файл с константами, по типу 800, 600 и т.п.
+            _lastPosition = _lastPosition + new SharpDX.Vector2(100, 0);
+        }
         public bool AddItem(T item)
         {
             if (IsFull)
@@ -68,7 +79,7 @@ namespace Lab01
             }
             else
             {
-                for (int i = 0; i < _inventoryItems.Length; i++)
+                for (int i = 0; i < _inventoryItems.Count; i++)
                 {
                     if (_inventoryItems[i].Item == null)
                     {
@@ -88,7 +99,7 @@ namespace Lab01
 
         public void RemoveItem(T item)
         {
-            for (int i = 0; i < _inventoryItems.Length; i++)
+            for (int i = 0; i < _inventoryItems.Count; i++)
             {
                 if (_inventoryItems[i].Item == item)
                 {

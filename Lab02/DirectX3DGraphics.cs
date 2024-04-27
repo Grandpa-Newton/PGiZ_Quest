@@ -4,6 +4,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 using SharpDX;
 using SharpDX.Direct2D1;
 using SharpDX.Direct3D;
@@ -11,7 +12,10 @@ using SharpDX.Direct3D11;
 using SharpDX.DXGI;
 using SharpDX.WIC;
 using SharpDX.Windows;
+using AlphaMode = SharpDX.Direct2D1.AlphaMode;
 using Device11 = SharpDX.Direct3D11.Device;
+using FeatureLevel = SharpDX.Direct2D1.FeatureLevel;
+using PixelFormat = SharpDX.Direct2D1.PixelFormat;
 
 namespace QuestGame
 {
@@ -89,6 +93,7 @@ namespace QuestGame
         public SharpDX.DirectWrite.Factory FactoryDWrite { get => _factoryDWrite; }
 
         private SharpDX.WIC.ImagingFactory2 _imagingFactory;
+        private RenderTargetProperties _renderTargetProperties;
 
         public SharpDX.WIC.ImagingFactory2 ImagingFactory { get => _imagingFactory; }
 
@@ -214,9 +219,20 @@ namespace QuestGame
 
 
             _surface = _backBuffer.QueryInterface<Surface>();
+            
+            _renderTargetProperties = new RenderTargetProperties
+            {
+                Type = RenderTargetType.Hardware,
+                PixelFormat = new PixelFormat(
+                    Format.Unknown,
+                    AlphaMode.Premultiplied),
+                DpiX = 0,
+                DpiY = 0,
+                Usage = RenderTargetUsage.None,
+                MinLevel = FeatureLevel.Level_10
+            };
 
-            _d2dRenderTarget = new RenderTarget(_d2dFactory, _surface,
-                new RenderTargetProperties(new SharpDX.Direct2D1.PixelFormat(Format.Unknown, SharpDX.Direct2D1.AlphaMode.Premultiplied)));
+            _d2dRenderTarget = new RenderTarget(_d2dFactory, _surface, _renderTargetProperties);
 
 
             _dxgiDevice = _device.QueryInterface<SharpDX.DXGI.Device>();
@@ -249,12 +265,15 @@ namespace QuestGame
 
         public void Resize()
         {
+            if (_renderForm.WindowState == FormWindowState.Minimized)
+                return;
+            
+            Utilities.Dispose(ref _d2dRenderTarget);
             Utilities.Dispose(ref _depthStencilView);
             Utilities.Dispose(ref _depthStencilBuffer);
             Utilities.Dispose(ref _renderTargetView);
             Utilities.Dispose(ref _backBuffer);
             Utilities.Dispose(ref _surface);
-            Utilities.Dispose(ref _d2dRenderTarget);
 
             _swapChain.ResizeBuffers(_swapChainDescription.BufferCount,
                 _renderForm.ClientSize.Width, _renderForm.ClientSize.Height,
@@ -273,17 +292,21 @@ namespace QuestGame
 
             _depthStencilView = new DepthStencilView(_device, _depthStencilBuffer);
 
-            _surface = _backBuffer.QueryInterface<Surface>();
-
-            _d2dRenderTarget = new RenderTarget(_d2dFactory, _surface,
-                new RenderTargetProperties(new SharpDX.Direct2D1.PixelFormat(Format.Unknown, SharpDX.Direct2D1.AlphaMode.Premultiplied)));
-
             _deviceContext.Rasterizer.SetViewport(
                 new Viewport(0, 0,
                 _renderForm.ClientSize.Width, _renderForm.ClientSize.Height,
                 0.0f, 1.0f)
                 );
             _deviceContext.OutputMerger.SetTargets(_depthStencilView, _renderTargetView);
+            
+            _surface = _backBuffer.QueryInterface<Surface>();
+
+            _d2dRenderTarget = new RenderTarget(_d2dFactory, _surface,
+                _renderTargetProperties);
+            
+            _d2dRenderTarget.AntialiasMode = AntialiasMode.PerPrimitive;
+            _d2dRenderTarget.TextAntialiasMode = TextAntialiasMode.Cleartype;
+
         }
 
         public void ClearBuffers(Color backgroundColor)

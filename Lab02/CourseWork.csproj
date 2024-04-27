@@ -180,6 +180,7 @@
     <Compile Include="Material.cs" />
     <Compile Include="MeshObject.cs" />
     <Compile Include="Npc.cs" />
+    <Compile Include="PlayerBoost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderer.cs" />

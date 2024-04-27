@@ -18,6 +18,8 @@ namespace Lab01
         public MainInventoryItem[] GivingItems;
         public CollectibleItem[] GivingCollectibles;
         public MainInventoryItem[] TakenItems;
+
+        public PlayerBoost PlayerBoost;
         public NpcResponse Interact()
         {
             NpcResponse npcResponse = null;
@@ -34,7 +36,7 @@ namespace Lab01
                     break;
                 
                 case NpcStates.AfterQuestComplete:
-                    npcResponse = new NpcResponse(TakenItems, InteractTextAfterComplete);
+                    npcResponse = new NpcResponse(TakenItems, InteractTextAfterComplete, PlayerBoost);
                     break;
             }
 
@@ -54,8 +56,9 @@ namespace Lab01
         }
 
         public Npc(MeshObject gameObject, string firstInteractText, string repeatedInteractText,
-            string interactTextAfterComplete, ref Action questCompleteAction, MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
-            MainInventoryItem[] takenItems = null)
+            string interactTextAfterComplete, ref Action questCompleteAction,
+            MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
+            MainInventoryItem[] takenItems = null, PlayerBoost playerBoost = null)
         {
             GameObject = gameObject;
             FirstInteractText = firstInteractText;
@@ -76,6 +79,8 @@ namespace Lab01
             {
                 TakenItems = takenItems;
             }
+
+            PlayerBoost = playerBoost;
             
             questCompleteAction += QuestComplete;
         }
@@ -90,12 +95,14 @@ namespace Lab01
     {
         public MainInventoryItem[] Items;
         public string ResponseText;
+        public PlayerBoost PlayerBoost;
         
 
-        public NpcResponse(MainInventoryItem[] items, string responseText)
+        public NpcResponse(MainInventoryItem[] items, string responseText, PlayerBoost playerBoost = null)
         {
             Items = items;
             ResponseText = responseText;
+            this.PlayerBoost = playerBoost;
         }
     }
     
