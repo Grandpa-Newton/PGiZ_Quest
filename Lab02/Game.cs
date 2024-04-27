@@ -383,7 +383,7 @@ namespace QuestGame
 
         }
 
-        static void PLaySoundFile(XAudio2 device, string text, string fileName)
+        void PLaySoundFile(XAudio2 device, string text, string fileName)
         {
             var stream = new SoundStream(File.OpenRead(fileName));
             var waveFormat = stream.Format;
@@ -391,7 +391,8 @@ namespace QuestGame
             {
                 Stream = stream.ToDataStream(),
                 AudioBytes = (int) stream.Length,
-                Flags = BufferFlags.EndOfStream
+                Flags = BufferFlags.EndOfStream,
+                LoopCount = AudioBuffer.LoopInfinite
             };
             stream.Close();
             
@@ -402,8 +403,11 @@ namespace QuestGame
             sourceVoice.Start();
         }
 
-        private static void SourceVoiceOnBufferEnd(IntPtr obj)
+        private void SourceVoiceOnBufferEnd(IntPtr obj)
         {
+            //sourceVoice.Stop();
+            //sourceVoice.Start();
+            //PLaySoundFile(xaudio2, "aa", "backgroundMusic.wav");
         }
 
         private void OnRightPlayerSequenceSecondNpc()
@@ -469,7 +473,7 @@ namespace QuestGame
         private TextFormat testTextFormat;
         private readonly MainInventoryItem treasureItem;
         private readonly MeshObject _secondNpcObject;
-        private readonly XAudio2 xaudio2;
+        private XAudio2 xaudio2;
         private static SourceVoice sourceVoice;
         private static AudioBuffer audioBuffer;
 

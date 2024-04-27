@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\directx3dgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\directx3dgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:directx3dgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:loader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,8 +70,7 @@
               "RelativeToolTip": "InventoryItem.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwBoAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:06:31.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T09:06:31.654Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "DirectX3DGraphics.cs",
               "ViewState": "AQIAAIMAAAAAAAAAAAAAAIoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:04:21.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T09:04:21.819Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "RelativeToolTip": "Sprite.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAD4vzoAAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T08:50:58.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T08:50:58.017Z"
             },
             {
               "$type": "Document",
@@ -107,7 +104,7 @@
               "RelativeDocumentMoniker": "Inventory.cs",
               "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Inventory.cs",
               "RelativeToolTip": "Inventory.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAtwCUAAABlAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAtwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T08:38:55.883Z",
               "EditorCaption": ""
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Game.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAQwMcBAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T08:31:59.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-26T08:31:59.107Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "Loader.cs",
               "ViewState": "AQIAABEBAAAAAAAAAAAUwDsBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T17:02:25.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T17:02:25.048Z"
             }
           ]
         }
