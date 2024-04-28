@@ -176,6 +176,8 @@ namespace QuestGame
                 out _swapChain);
             _deviceContext = _device.ImmediateContext;
 
+            
+            
             _rasterizerStateDescription = new RasterizerStateDescription()
             {
                 FillMode = SharpDX.Direct3D11.FillMode.Solid,
