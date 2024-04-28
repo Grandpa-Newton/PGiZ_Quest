@@ -89,6 +89,8 @@ namespace QuestGame
 
         private string textLayoutText = "";
 
+        private Animation _playerMoveAnimation;
+
         Vector4[] _lightColors = new Vector4[NUM_LIGHTS]
         {
             new Vector4(0f, 1f, 1f, 1f),
@@ -141,6 +143,7 @@ namespace QuestGame
         private float _playerSpeed = 1f;
         private Texture _islandTexture;
         private MeshObject _island;
+        private Texture _playerTexture;
 
         private void CreatingObjects()
         {
@@ -232,10 +235,13 @@ namespace QuestGame
             var objLoaderFactory = new ObjLoaderFactory();
             var objLoader = objLoaderFactory.Create();
 
-            var fileStream = new FileStream("mainCharacter.obj", FileMode.Open);
+            var fileStream = new FileStream("Boss.obj", FileMode.Open);
             var result = objLoader.Load(fileStream);
             
-            _player = loader.LoadMeshObjectFromObjFile(result, new Vector4(ToDecart(new Vector3(0f, 0f, 0f)), 1f), 0f, 0f, 0.0f, ref _plotTexture, _renderer.AnisotropicSampler);
+            _player = loader.LoadMeshObjectFromObjFile(result, new Vector4(ToDecart(new Vector3(0f, 0f, 0f)), 1f), 0f, 0f, 0.0f, ref _playerTexture, _renderer.AnisotropicSampler);
+
+            _playerMoveAnimation = new Animation();
+            _playerMoveAnimation.Load("Animations/Walk/", loader, _renderer.AnisotropicSampler, 0.1f);
             
             _playerCollider = new BoundingBox(new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y), result.Vertices.Min(v => v.Z)) + (Vector3)_player.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y), result.Vertices.Max(v => v.Z)) + (Vector3)_player.Position);
@@ -596,6 +602,17 @@ namespace QuestGame
             playerMovement *= _timeHelper.DeltaT * _playerSpeed;
             
             _player.MoveBy(playerMovement.X, playerMovement.Y, playerMovement.Z);
+            
+            
+            
+            var currentAnimMesh = _playerMoveAnimation.GetCurrentMesh();
+            _playerMoveAnimation.ContinueAnimation();
+            currentAnimMesh.MoveTo(_player.Position.X, _player.Position.Y, _player.Position.Z);
+            currentAnimMesh.Pitch = _player.Pitch;
+            currentAnimMesh.Roll = _player.Roll;
+            currentAnimMesh.Yaw = _player.Yaw;
+            _player = currentAnimMesh;
+            
             _playerCollider.Minimum += playerMovement;
             _playerCollider.Maximum += playerMovement;
             _camera.MoveBy(playerMovement.X, playerMovement.Y, playerMovement.Z);
@@ -617,7 +634,7 @@ namespace QuestGame
 
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
             _renderer.UpdatePerObjectConstantBuffers(_player.GetWorldMatrix(), viewMatrix, projectionMatrix);
-            _renderer.SetTexture(_tetrahedronTexture);
+            _renderer.SetTexture(_playerTexture);
             _renderer.RenderMeshObject(_player);
             
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
