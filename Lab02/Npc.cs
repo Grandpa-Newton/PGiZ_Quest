@@ -20,6 +20,8 @@ namespace Lab01
         public MainInventoryItem[] TakenItems;
 
         public PlayerBoost PlayerBoost;
+        private readonly string InteractTextAfterGivingItems;
+
         public NpcResponse Interact()
         {
             NpcResponse npcResponse = null;
@@ -37,6 +39,9 @@ namespace Lab01
                 
                 case NpcStates.AfterQuestComplete:
                     npcResponse = new NpcResponse(TakenItems, InteractTextAfterComplete, PlayerBoost);
+                    break;
+                case NpcStates.AfterGivingPrizes:
+                    npcResponse = new NpcResponse(null, InteractTextAfterGivingItems);
                     break;
             }
 
@@ -56,7 +61,7 @@ namespace Lab01
         }
 
         public Npc(MeshObject gameObject, string firstInteractText, string repeatedInteractText,
-            string interactTextAfterComplete, ref Action questCompleteAction,
+            string interactTextAfterComplete, string interactTextAfterGivingItems, ref Action questCompleteAction,
             MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
             MainInventoryItem[] takenItems = null, PlayerBoost playerBoost = null)
         {
@@ -64,6 +69,7 @@ namespace Lab01
             FirstInteractText = firstInteractText;
             RepeatedInteractText = repeatedInteractText;
             InteractTextAfterComplete = interactTextAfterComplete;
+            InteractTextAfterGivingItems = interactTextAfterGivingItems;
 
             if (givingItems != null)
             {
@@ -89,6 +95,11 @@ namespace Lab01
         {
             NpcState = NpcStates.AfterQuestComplete;
         }
+
+        public void TakePrizes()
+        {
+            NpcState = NpcStates.AfterGivingPrizes;
+        }
     }
 
     internal class NpcResponse
@@ -110,6 +121,7 @@ namespace Lab01
     {
         BeforeGivingQuest = 0,
         AfterGivingQuest = 1,
-        AfterQuestComplete = 2
+        AfterQuestComplete = 2,
+        AfterGivingPrizes = 3
     }
 }

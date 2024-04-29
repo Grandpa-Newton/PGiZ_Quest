@@ -275,9 +275,9 @@ namespace QuestGame
 
             _playerCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z)) + (Vector3)_player.Position,
+                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_player.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z)) + (Vector3)_player.Position);
+                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_player.Position);
 
 
             _firstNpcObject = loader.LoadMeshObjectFromObjFile(result,
@@ -286,9 +286,9 @@ namespace QuestGame
 
             _firstNpcCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z)) + (Vector3)_firstNpcObject.Position,
+                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_firstNpcObject.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z)) + (Vector3)_firstNpcObject.Position);
+                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_firstNpcObject.Position);
 
             _secondNpcObject = loader.LoadMeshObjectFromObjFile(result,
                 new Vector4(ToDecart(new Vector3(0f, -3f, 0f)), 1f), 0f,
@@ -296,9 +296,9 @@ namespace QuestGame
 
             var secondNpcCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z)) + (Vector3)_secondNpcObject.Position,
+                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_secondNpcObject.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z)) + (Vector3)_secondNpcObject.Position);
+                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_secondNpcObject.Position);
 
             _treasureCollider = new BoundingBox(_firstNpcCollider.Minimum + ToDecart(new Vector3(1, 1, 0)),
                 _firstNpcCollider.Maximum + ToDecart(new Vector3(1, 1, 0)));
@@ -322,6 +322,7 @@ namespace QuestGame
                 "Здарова, я, когда был маленьким, закопал сокровища у своего дома, \r\nно забыл где, осталась только карта, помоги, пожалуйста.",
                 "Ну я ж тебе уже всё сказал, давай иди ищи, чувак.",
                 "Блин, мужик, спасибо большое, на вот тебе за это кубок \r\nза победу в турнире по мини-футболу среди юношей!",
+                "Мужик, ну я тебе самое ценное в своей жизни отдал уже!",
                 ref OnPlayerFindingTreasure, new MainInventoryItem[]
                 {
                     shovelItem
@@ -343,7 +344,8 @@ namespace QuestGame
             var secondNpc = new Npc(_secondNpcObject,
                 "Привет, мне тут одну загадку дали, помоги-ка, я тебе подгончик сделаю",
                 "Ну, я ж тебе уже записку с загадкой дал, давай вали отсюда",
-                "Красава, не ожидал. Вот тебе кожура от банана!", ref OnSecondNpcTaskSolved, null, new[]
+                "Красава, не ожидал. Вот тебе кожура от банана!",
+                "*молчание*", ref OnSecondNpcTaskSolved, null, new[]
                 {
                     bananaItem
                 });
@@ -869,6 +871,8 @@ namespace QuestGame
                 }
 
                 npcSpeed = ToDecart(new Vector3(0f, 0.0001f, 0f));
+
+                npc.Value.TakePrizes();
             }
             else
             {
