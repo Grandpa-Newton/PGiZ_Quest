@@ -336,3 +336,4 @@ C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\Animations\Idle\IdleAnimatio
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\image.png
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\palm.mtl
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\palm.obj
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\playerIcon.png

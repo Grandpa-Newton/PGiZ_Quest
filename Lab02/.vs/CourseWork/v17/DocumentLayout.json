@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:inventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\directx3dgraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 93,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InventoryItem.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\InventoryItem.cs",
               "RelativeDocumentMoniker": "InventoryItem.cs",
@@ -70,7 +70,8 @@
               "RelativeToolTip": "InventoryItem.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwBoAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:06:31.654Z"
+              "WhenOpened": "2024-04-14T09:06:31.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -82,11 +83,12 @@
               "RelativeToolTip": "DirectX3DGraphics.cs",
               "ViewState": "AQIAAIMAAAAAAAAAAAAAAIoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:04:21.819Z"
+              "WhenOpened": "2024-04-14T09:04:21.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Sprite.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Sprite.cs",
               "RelativeDocumentMoniker": "Sprite.cs",
@@ -94,32 +96,34 @@
               "RelativeToolTip": "Sprite.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAD4vzoAAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T08:50:58.017Z"
+              "WhenOpened": "2024-04-14T08:50:58.017Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Inventory.cs",
               "RelativeDocumentMoniker": "Inventory.cs",
               "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Inventory.cs",
               "RelativeToolTip": "Inventory.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAtwBwAAAAAAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAACoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T08:38:55.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAQwMcBAAArAAAA",
+              "ViewState": "AQIAAP8BAAAAAAAAAAAuwB4CAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T08:31:59.107Z"
+              "WhenOpened": "2024-03-26T08:31:59.107Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -131,7 +135,8 @@
               "RelativeToolTip": "Camera.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBEAAABkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T17:59:46.24Z"
+              "WhenOpened": "2024-03-25T17:59:46.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -143,7 +148,8 @@
               "RelativeToolTip": "pixel.hlsl",
               "ViewState": "AQIAAKEAAAAAAAAAAAAAALcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2024-03-25T17:01:34.325Z"
+              "WhenOpened": "2024-03-25T17:01:34.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -155,7 +161,8 @@
               "RelativeToolTip": "Loader.cs",
               "ViewState": "AQIAABEBAAAAAAAAAAAUwDsBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T17:02:25.048Z"
+              "WhenOpened": "2024-03-25T17:02:25.048Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -69,7 +69,7 @@ namespace Lab01
             _defaultScale = defaultScale;
         }
 
-        public void Draw(float opacity)
+        public void Draw(float opacity = 1.0f)
         {
 
             Vector2 center;

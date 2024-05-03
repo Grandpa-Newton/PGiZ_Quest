@@ -168,6 +168,7 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="DialogueVisual.cs" />
     <Compile Include="DirectX3DGraphics.cs" />
     <Compile Include="DXInput.cs" />
     <Compile Include="Game.cs" />
@@ -1066,6 +1067,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pixel.hlsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="playerIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="plotTexture.png">

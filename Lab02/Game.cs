@@ -18,6 +18,7 @@ using SharpDX.IO;
 using SharpDX.WIC;
 using System.IO.Packaging;
 using System.Windows.Forms;
+using ObjLoader.Loader.Common;
 using ObjLoader.Loader.Loaders;
 using SharpDX.Multimedia;
 using SharpDX.XAudio2;
@@ -51,6 +52,12 @@ namespace QuestGame
 
         SharpDX.Direct2D1.Bitmap _playerBitmap;
 
+        private Sprite _playerIcon;
+
+        private DialogueVisual _mainDialogue;
+
+        private Vector2 dialogueSpritePosition;
+
         SharpDX.Direct2D1.DeviceContext _d2dContext;
 
         private SharpDX.Direct2D1.Bitmap1 d2dTarget;
@@ -64,6 +71,8 @@ namespace QuestGame
         SharpDX.Direct2D1.SolidColorBrush _purpleBrush;
 
         SharpDX.Direct2D1.SolidColorBrush _whiteBrush;
+
+        SharpDX.Direct2D1.SolidColorBrush _fullWhiteBrush;
 
         private BoundingBox _playerCollider;
 
@@ -135,6 +144,7 @@ namespace QuestGame
 
         private TextLayout _textLayout = null;
         private TextFormat testTextFormat;
+        private TextFormat collectibleTextFormat;
         private readonly MainInventoryItem treasureItem;
         private readonly MeshObject _secondNpcObject;
         private XAudio2 xaudio2;
@@ -186,7 +196,16 @@ namespace QuestGame
             var black = SharpDX.Color.Black;
             black.A = 100;
 
+            _mainDialogue = new DialogueVisual(_directX3DGraphics.D2DRenderTarget);
+
             _blackBrush = new SolidColorBrush(_directX3DGraphics.D2DRenderTarget, black);
+
+            dialogueSpritePosition = new Vector2(100f, 50f);
+            collectibleTextFormat = new TextFormat(_directX3DGraphics.FactoryDWrite, "Calibri", 50)
+            {
+                TextAlignment = SharpDX.DirectWrite.TextAlignment.Center,
+                ParagraphAlignment = ParagraphAlignment.Center,
+            };
 
 
             /*SharpDX.DXGI.Device2 dxgiDevice2 = _directX3DGraphics.Device.QueryInterface<SharpDX.DXGI.Device2>();
@@ -243,6 +262,8 @@ namespace QuestGame
             var fileStream = new FileStream("Boss.obj", FileMode.Open);
             var result = objLoader.Load(fileStream);
 
+            fileStream.Close();
+
             _player = loader.LoadMeshObjectFromObjFile(result, new Vector4(ToDecart(new Vector3(0f, 0f, 0f)), 1f), 0f,
                 0f, 0.0f, ref _playerTexture, _renderer.AnisotropicSampler);
 
@@ -257,6 +278,7 @@ namespace QuestGame
 
             fileStream = new FileStream("palm.obj", FileMode.Open);
             result = objLoader.Load(fileStream);
+            fileStream.Close();
 
             _palm = loader.LoadMeshObjectFromObjFile(result, new Vector4(ToDecart(new Vector3(0f, 0f, 0f)), 1f), 0f,
                 0f, 0.0f, ref _palmTexture, _renderer.AnisotropicSampler, 0.01f);
@@ -275,30 +297,46 @@ namespace QuestGame
 
             _playerCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_player.Position,
+                    result.Vertices.Min(v => v.Z)) * 0.01f + (Vector3)_player.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_player.Position);
+                    result.Vertices.Max(v => v.Z)) * 0.01f + (Vector3)_player.Position);
 
+
+            objLoaderFactory = new ObjLoaderFactory();
+            objLoader = objLoaderFactory.Create();
+
+            fileStream = new FileStream("Boss.obj", FileMode.Open);
+            result = objLoader.Load(fileStream);
+
+            fileStream.Close();
 
             _firstNpcObject = loader.LoadMeshObjectFromObjFile(result,
-                new Vector4(ToDecart(new Vector3(-1f, -1f, 0f)), 1f), 0f,
-                0f, 0f, ref _npcTexture, _renderer.AnisotropicSampler, 0.01f);
+                new Vector4(ToDecart(new Vector3(-1.5f, -1.5f, 0f)), 1f), 0f,
+                0f, 0f, ref _npcTexture, _renderer.AnisotropicSampler, 0.1f);
 
             _firstNpcCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_firstNpcObject.Position,
+                    result.Vertices.Min(v => v.Z)) * 0.1f + (Vector3)_firstNpcObject.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_firstNpcObject.Position);
+                    result.Vertices.Max(v => v.Z)) * 0.1f + (Vector3)_firstNpcObject.Position);
+
+            objLoaderFactory = new ObjLoaderFactory();
+            objLoader = objLoaderFactory.Create();
+
+            fileStream = new FileStream("Boss.obj", FileMode.Open);
+            result = objLoader.Load(fileStream);
+
+            fileStream.Close();
 
             _secondNpcObject = loader.LoadMeshObjectFromObjFile(result,
-                new Vector4(ToDecart(new Vector3(0f, -3f, 0f)), 1f), 0f,
-                0f, 0f, ref _npcTexture, _renderer.AnisotropicSampler, 0.01f);
+                new Vector4(ToDecart(new Vector3(0f, -1.5f, 0f)), 1f), 0f,
+                0f, 0f, ref _npcTexture, _renderer.AnisotropicSampler, 0.1f);
 
             var secondNpcCollider = new BoundingBox(
                 new Vector3(result.Vertices.Min(v => v.X), result.Vertices.Min(v => v.Y),
-                    result.Vertices.Min(v => v.Z))*0.01f + (Vector3)_secondNpcObject.Position,
+                    result.Vertices.Min(v => v.Z)) * 0.1f + (Vector3)_secondNpcObject.Position,
                 new Vector3(result.Vertices.Max(v => v.X), result.Vertices.Max(v => v.Y),
-                    result.Vertices.Max(v => v.Z))*0.01f + (Vector3)_secondNpcObject.Position);
+                    result.Vertices.Max(v => v.Z)) * 0.1f + (Vector3)_secondNpcObject.Position);
 
             _treasureCollider = new BoundingBox(_firstNpcCollider.Minimum + ToDecart(new Vector3(1, 1, 0)),
                 _firstNpcCollider.Maximum + ToDecart(new Vector3(1, 1, 0)));
@@ -332,7 +370,7 @@ namespace QuestGame
                 }, new[]
                 {
                     treasureItem
-                }, new PlayerBoost(20f, 2));
+                }, new PlayerBoost(2f, 1));
 
             CollectibleItem bananaItem = new CollectibleItem(new Sprite(_directX3DGraphics,
                     DirectX3DGraphics.LoadFromFile(_directX3DGraphics.D2DRenderTarget, "bananaPeel.png"), Vector2.Zero,
@@ -340,7 +378,10 @@ namespace QuestGame
                     new Vector2(800, 600), 0.05f),
                 "Просто кожура от банана, я бы лучше её вообще выкинул, но ты как знаешь.");
 
-
+            _playerIcon = new Sprite(_directX3DGraphics,
+                DirectX3DGraphics.LoadFromFile(_directX3DGraphics.D2DRenderTarget, "playerIcon.png"), dialogueSpritePosition,
+                0f, new Vector2(800, 600), 0.75f);
+            
             var secondNpc = new Npc(_secondNpcObject,
                 "Привет, мне тут одну загадку дали, помоги-ка, я тебе подгончик сделаю",
                 "Ну, я ж тебе уже записку с загадкой дал, давай вали отсюда",
@@ -411,6 +452,7 @@ namespace QuestGame
             _blueBrush = new SolidColorBrush(_directX3DGraphics.D2DRenderTarget, SharpDX.Color.Blue);
             _purpleBrush = new SolidColorBrush(_directX3DGraphics.D2DRenderTarget, SharpDX.Color.Purple);
             _whiteBrush = new SolidColorBrush(_directX3DGraphics.D2DRenderTarget, white);
+            _fullWhiteBrush = new SolidColorBrush(_directX3DGraphics.D2DRenderTarget, SharpDX.Color.WhiteSmoke);
 
             _playerBitmap =
                 DirectX3DGraphics.LoadFromFile(_directX3DGraphics.D2DRenderTarget, "textureTetrahedron.png");
@@ -515,7 +557,7 @@ namespace QuestGame
             stream.Close();
 
             sourceVoice = new SourceVoice(device, waveFormat, true);
-            // Adds a sample callback to check that they are working on source voices
+
             sourceVoice.BufferEnd += SourceVoiceOnBufferEnd;
             sourceVoice.SubmitSourceBuffer(audioBuffer, stream.DecodedPacketsInfo);
             sourceVoice.Start();
@@ -726,7 +768,7 @@ namespace QuestGame
 
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
             _renderer.UpdatePerObjectConstantBuffers(_firstNpcObject.GetWorldMatrix(), viewMatrix, projectionMatrix);
-            _renderer.SetTexture(_npcTexture);
+            _renderer.SetTexture(_playerTexture);
             _renderer.RenderMeshObject(_firstNpcObject);
 
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
@@ -742,7 +784,7 @@ namespace QuestGame
 
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
             _renderer.UpdatePerObjectConstantBuffers(_secondNpcObject.GetWorldMatrix(), viewMatrix, projectionMatrix);
-            _renderer.SetTexture(_npcTexture);
+            _renderer.SetTexture(_playerTexture);
             _renderer.RenderMeshObject(_secondNpcObject);
 
             _renderer.SetPerObjectConstantBuffer(_defaultMaterial);
@@ -794,6 +836,7 @@ namespace QuestGame
                 ParagraphAlignment = ParagraphAlignment.Center,
             };
 
+
             _directX3DGraphics.D2DRenderTarget.TextAntialiasMode = SharpDX.Direct2D1.TextAntialiasMode.Cleartype;
             //= new TextLayout(_directX3DGraphics.FactoryDWrite, $"NPC:{_firstNpcCollider.Center},\n\r Player:{_playerCollider.Center}", testTextFormat, _renderForm.Width, _renderForm.Height);
 
@@ -804,6 +847,26 @@ namespace QuestGame
                 _directX3DGraphics.D2DRenderTarget.FillRectangle(
                     new SharpDX.Mathematics.Interop.RawRectangleF(0f, 0f, _renderForm.Width, _renderForm.Height),
                     _blackBrush); // рамка карты
+                var collectibleTextLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, "Коллекционные предметы",
+                    collectibleTextFormat, _renderForm.Width,
+                    _renderForm.Height);
+                _directX3DGraphics.D2DRenderTarget.DrawTextLayout(
+                    new RawVector2(0f, 50 - _renderForm.Height / 2f), collectibleTextLayout, _fullWhiteBrush,
+                    DrawTextOptions.None);
+                _textLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, "Описание", testTextFormat,
+                    _renderForm.Width, _renderForm.Height);
+                _directX3DGraphics.D2DRenderTarget.DrawTextLayout(
+                    new RawVector2(0f, 300), _textLayout, _fullWhiteBrush, DrawTextOptions.None);
+                var activeItem = _collectiblesInventory.GetActiveItem();
+                if (activeItem != null && activeItem.Item != null)
+                {
+                    _textLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, activeItem.Item.Description,
+                        testTextFormat,
+                        _renderForm.Width, _renderForm.Height);
+                    _directX3DGraphics.D2DRenderTarget.DrawTextLayout(
+                        new RawVector2(0f, 350), _textLayout, _fullWhiteBrush, DrawTextOptions.None);
+                }
+
                 _collectiblesInventory.DrawInventory();
             }
             else
@@ -813,6 +876,7 @@ namespace QuestGame
 
             if (_isDisplayingText)
             {
+                //_directX3DGraphics.D2DRenderTarget.DrawRoundedRectangle(new RoundedRectangle());
                 //textLayoutText = (_secondNpcSequentialQuest.InteractableObjects[0].MeshCollider.Center).ToString() + _player.Position;
                 _textLayout = new TextLayout(_directX3DGraphics.FactoryDWrite, textLayoutText, testTextFormat,
                     _renderForm.Width, _renderForm.Height);
@@ -820,6 +884,12 @@ namespace QuestGame
                     new RawVector2(_renderForm.Width / 2 - 400, _renderForm.Height / 2 - 100), _textLayout, _whiteBrush,
                     DrawTextOptions.None);
             }
+
+            _playerIcon.DefaultSize = new Vector2(_renderForm.Width, _renderForm.Height);
+            _playerIcon.CenterPosition = new Vector2(320f * _renderForm.Width / 1920f, 320f * _renderForm.Height/1080f);
+
+            if(!textLayoutText.IsNullOrEmpty())
+                _mainDialogue.Draw(_directX3DGraphics.D2DRenderTarget, _directX3DGraphics.FactoryDWrite, _playerIcon, "Ванёк: ", textLayoutText, _renderForm);
 
             _directX3DGraphics.D2DRenderTarget.EndDraw();
 
@@ -932,7 +1002,7 @@ namespace QuestGame
             UpdateNPC();
 
             DrawHUD();
-            
+
             _renderer.EndRender();
         }
 

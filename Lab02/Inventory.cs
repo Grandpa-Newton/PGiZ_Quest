@@ -70,6 +70,7 @@ namespace Lab01
             _inventoryItems.Add(new InventoryItem<T>(_directX3DGraphics, null, _lastPosition + new SharpDX.Vector2(100, 0), 
                 0f, new SharpDX.Vector2(800, 600))); //TODO сделать какой-то файл с константами, по типу 800, 600 и т.п.
             _lastPosition = _lastPosition + new SharpDX.Vector2(100, 0);
+            IsFull = false;
         }
         public bool AddItem(T item)
         {
