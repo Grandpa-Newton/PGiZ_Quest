@@ -29,6 +29,8 @@ namespace Lab01
 
         private SharpDX.Vector2 _lastPosition;
 
+        public Action OnInventoryFull;
+
         public Inventory(DirectX3DGraphics directX3DGraphics, DXInput dxInput, InventoryItem<T>[] inventoryItems)
         {
             _directX3DGraphics = directX3DGraphics;
@@ -85,17 +87,55 @@ namespace Lab01
                     if (_inventoryItems[i].Item == null)
                     {
                         _inventoryItems[i].ChangeItem(item);
+                        
+                        IsFull = CheckIsFull();
+
+                        if (IsFull)
+                        {
+                            OnInventoryFull?.Invoke();
+                        }
+                        
                         return true;
                     }
                 }
+
+                
 
                 return false;
             }
         }
 
+        private bool CheckIsFull()
+        {
+            foreach (var item in _inventoryItems)
+            {
+                if (item.Item == null)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public void ChangeItem(T item, int index)
         {
             _inventoryItems[index].ChangeItem(item);
+        }
+
+        public bool ChangeItem(T newItem, T previousItem)
+        {
+            foreach (var item in _inventoryItems)
+            {
+                if (item.Item == previousItem)
+                {
+                    newItem.Sprite.CenterPosition = item.Item.Sprite.CenterPosition;
+                    item.Item = newItem;
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void RemoveItem(T item)

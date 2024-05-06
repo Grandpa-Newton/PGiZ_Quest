@@ -10,6 +10,9 @@ namespace Lab01
         public string RepeatedInteractText;
         public string InteractTextAfterComplete;
 
+        public Sprite IconSprite;
+        public string Name;
+
 
         public Action OnStartingQuest;
         
@@ -61,8 +64,8 @@ namespace Lab01
         }
 
         public Npc(MeshObject gameObject, string firstInteractText, string repeatedInteractText,
-            string interactTextAfterComplete, string interactTextAfterGivingItems, ref Action questCompleteAction,
-            MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
+            string interactTextAfterComplete, string interactTextAfterGivingItems, ref Action questCompleteAction, Sprite iconSprite,
+            string name, MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
             MainInventoryItem[] takenItems = null, PlayerBoost playerBoost = null)
         {
             GameObject = gameObject;
@@ -70,6 +73,8 @@ namespace Lab01
             RepeatedInteractText = repeatedInteractText;
             InteractTextAfterComplete = interactTextAfterComplete;
             InteractTextAfterGivingItems = interactTextAfterGivingItems;
+            IconSprite = iconSprite;
+            Name = name;
 
             if (givingItems != null)
             {

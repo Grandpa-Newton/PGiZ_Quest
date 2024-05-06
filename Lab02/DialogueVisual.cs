@@ -38,7 +38,7 @@ namespace Lab01
                 TextAlignment = SharpDX.DirectWrite.TextAlignment.Center,
                 ParagraphAlignment = ParagraphAlignment.Center,
             };
-            var mainTextLayout = new TextLayout(factory, name + text, mainTextFormat, renderForm.Width,
+            var mainTextLayout = new TextLayout(factory, name + ": " + text, mainTextFormat, renderForm.Width,
                 renderForm.Height);
             float textOffset = renderForm.Height / 2f - renderForm.Height * 165f / 1080f;
             d2dRenderTarget.DrawTextLayout(new RawVector2(0f, textOffset), mainTextLayout, whiteBrush, DrawTextOptions.None);

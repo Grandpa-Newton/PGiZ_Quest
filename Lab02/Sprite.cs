@@ -94,5 +94,10 @@ namespace Lab01
             _directX3DGraphics.D2DRenderTarget.Transform = transform;
 
         }
+
+        public Sprite Clone()
+        {
+            return new Sprite(_directX3DGraphics, _bitmap, _centerPosition, _angle, _defaultSize, _defaultScale);
+        }
     }
 }

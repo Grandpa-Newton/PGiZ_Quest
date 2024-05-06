@@ -29,7 +29,7 @@ namespace QuestGame
         public Matrix GetProjectionMatrix()
         {
             //return Matrix.OrthoLH(_fovY, _aspect, 0.1f, 50.0f);
-            return Matrix.OrthoLH(0.003f * Width, 0.003f * Height, 0.1f, 50.0f);
+            return Matrix.OrthoLH(0.0015f * Width, 0.0015f * Height, 0.1f, 50.0f);
         }
 
         public Matrix GetViewMatrix()

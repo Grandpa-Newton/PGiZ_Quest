@@ -13,14 +13,14 @@ namespace Lab01
 
     internal class MainInventoryItem : Item
     {
-        private Func<bool> interactFunction;
-        public MainInventoryItem(Sprite sprite, Func<bool> interactFunction) : base(sprite)
+        private Func<MainInventoryItem, bool> interactFunction;
+        public MainInventoryItem(Sprite sprite, Func<MainInventoryItem, bool> interactFunction) : base(sprite)
         {
             this.interactFunction = interactFunction;
         }
         public bool Interact()
         {
-            return interactFunction.Invoke();
+            return interactFunction.Invoke(this);
         }
     }
     
