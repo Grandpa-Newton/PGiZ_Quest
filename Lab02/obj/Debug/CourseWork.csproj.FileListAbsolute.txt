@@ -378,3 +378,4 @@ C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\thirdNpcIcon.png
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\newBackgroundMusic.wav
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\victorySound.wav
 C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\bottle.png
+C:\универ\ПГиЗ\CourseWork\Lab02\bin\Debug\vase.png

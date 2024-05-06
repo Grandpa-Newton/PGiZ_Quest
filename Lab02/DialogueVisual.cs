@@ -21,7 +21,9 @@ namespace Lab01
 
         public void Draw(RenderTarget d2dRenderTarget, Factory factory, Sprite sprite, string name, string text, RenderForm renderForm)
         {
-            var blackBrush = new SolidColorBrush(d2dRenderTarget, Color.Black);
+            var blackColor = Color.Black;
+            blackColor.A = 170;
+            var blackBrush = new SolidColorBrush(d2dRenderTarget, blackColor);
             var whiteBrush = new SolidColorBrush(d2dRenderTarget, Color.WhiteSmoke);
             float sideOffset = renderForm.Width * 250f / 1920f;
             float bottomOffset = renderForm.Height * 75f / 1080f;
