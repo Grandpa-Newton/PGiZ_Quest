@@ -1,8 +1,8 @@
 ﻿using System;
-using QuestGame;
+using QuestGame.Infrastructure;
 using SharpDX;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
     internal class InteractableObject
     {
@@ -15,10 +15,10 @@ namespace Lab01
             MeshObject = meshObject;
             MeshCollider = collider;
         }
+
         public void Interact()
         {
             OnInteract?.Invoke();
         }
-        
     }
 }

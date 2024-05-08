@@ -1,17 +1,12 @@
-﻿using QuestGame;
-using SharpDX.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Net.Http.Headers;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SharpDX.DirectInput;
+using QuestGame.Infrastructure;
+using SharpDX.Windows;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
     internal class Inventory<T> where T : Item
     {
@@ -50,7 +45,6 @@ namespace Lab01
             }
 
             _lastPosition = inventoryItems[inventoryItems.Length - 1].CenterPosition;
-
         }
 
 
@@ -69,11 +63,13 @@ namespace Lab01
 
         public void ExpanseInventory()
         {
-            _inventoryItems.Add(new InventoryItem<T>(_directX3DGraphics, null, _lastPosition + new SharpDX.Vector2(100, 0), 
+            _inventoryItems.Add(new InventoryItem<T>(_directX3DGraphics, null,
+                _lastPosition + new SharpDX.Vector2(100, 0),
                 0f, new SharpDX.Vector2(800, 600))); //TODO сделать какой-то файл с константами, по типу 800, 600 и т.п.
             _lastPosition = _lastPosition + new SharpDX.Vector2(100, 0);
             IsFull = false;
         }
+
         public bool AddItem(T item)
         {
             if (IsFull)
@@ -87,19 +83,18 @@ namespace Lab01
                     if (_inventoryItems[i].Item == null)
                     {
                         _inventoryItems[i].ChangeItem(item);
-                        
+
                         IsFull = CheckIsFull();
 
                         if (IsFull)
                         {
                             OnInventoryFull?.Invoke();
                         }
-                        
+
                         return true;
                     }
                 }
 
-                
 
                 return false;
             }

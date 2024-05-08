@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SharpDX;
 
-using SharpDX;
-
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
-    class Camera : Game3DObject
+    internal class Camera : Game3DObject
     {
         private float _fovY;
-        public float FOVY { get => _fovY; set => _fovY = value; }
+
+        public float FOVY
+        {
+            get => _fovY;
+            set => _fovY = value;
+        }
 
         private float _aspect;
-        public float Aspect { get => _aspect; set => _aspect = value; }
+
+        public float Aspect
+        {
+            get => _aspect;
+            set => _aspect = value;
+        }
 
         public float Width;
 
         public float Height;
 
-        public Camera(Vector4 position, float yaw = 0.0f, float pitch = 0.0f, float roll = 0.0f, float fovY = MathUtil.PiOverTwo, float aspect = 1.0f)
+        public Camera(Vector4 position, float yaw = 0.0f, float pitch = 0.0f, float roll = 0.0f,
+            float fovY = MathUtil.PiOverTwo, float aspect = 1.0f)
             : base(position, yaw, pitch, roll)
         {
             _fovY = fovY;
@@ -28,7 +34,6 @@ namespace QuestGame
 
         public Matrix GetProjectionMatrix()
         {
-            //return Matrix.OrthoLH(_fovY, _aspect, 0.1f, 50.0f);
             return Matrix.OrthoLH(0.0015f * Width, 0.0015f * Height, 0.1f, 50.0f);
         }
 

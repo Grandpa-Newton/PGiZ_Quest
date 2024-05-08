@@ -201,6 +201,7 @@
     </Compile>
     <None Include="app.config" />
     <None Include="app.manifest" />
+    <None Include="MainDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -220,514 +221,868 @@
     <Content Include="ancientCoin.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0001.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0001.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0001.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0001.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0002.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0002.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0002.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0002.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0003.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0003.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0003.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0003.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0004.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0004.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0004.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0004.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0005.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0005.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0005.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0005.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0006.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0006.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0006.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0006.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0007.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0007.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0007.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0007.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0008.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0008.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0008.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0008.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0009.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0009.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0009.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0009.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0010.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0010.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0010.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0010.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0011.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0011.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0011.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0011.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0012.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0012.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0012.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0012.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0013.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0013.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0013.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0013.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0014.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0014.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0014.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0014.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0015.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0015.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0015.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0015.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0016.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0016.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0016.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0016.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0017.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0017.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0017.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0017.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0018.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0018.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0018.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0018.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0019.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0019.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0019.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0019.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0020.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0020.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0020.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0020.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0021.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0021.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0021.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0021.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0022.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0022.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0022.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0022.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0023.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0023.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0023.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0023.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0024.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0024.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0024.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0024.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0025.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0025.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0025.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0025.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0026.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0026.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0026.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0026.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0027.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0027.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0027.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0027.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0028.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0028.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0028.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0028.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0029.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0029.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0029.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0029.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0030.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0030.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0030.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0030.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0031.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0031.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0031.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0031.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0032.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0032.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0032.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0032.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0033.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0033.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0033.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0033.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0034.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0034.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0034.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0034.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0035.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0035.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0035.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0035.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0036.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0036.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0036.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0036.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0037.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0037.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0037.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0037.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0038.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0038.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0038.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0038.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0039.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0039.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0039.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0039.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0040.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0040.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0040.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0040.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0041.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0041.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0041.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0041.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0042.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0042.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0042.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0042.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0043.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0043.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0043.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0043.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0044.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0044.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0044.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0044.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0045.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0045.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0045.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0045.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0046.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0046.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0046.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0046.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0047.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0047.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0047.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0047.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0048.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0048.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0048.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0048.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0049.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0049.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0049.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0049.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0050.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0050.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0050.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0050.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0051.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0051.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0051.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0051.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0052.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0052.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0052.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0052.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0053.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0053.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0053.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0053.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0054.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0054.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0054.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0054.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0055.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0055.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0055.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0055.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0056.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0056.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0056.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0056.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0057.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0057.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0057.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0057.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0058.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0058.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0058.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0058.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0059.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0059.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0059.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0059.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0060.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0060.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0060.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0060.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0061.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0061.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0061.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0061.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0062.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0062.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0062.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0062.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0063.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0063.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0063.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0063.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0064.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0064.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0064.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0064.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0065.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0065.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0065.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0065.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0066.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0066.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0066.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0066.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0067.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0067.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0067.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0067.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0068.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0068.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0068.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0068.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0069.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0069.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0069.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0069.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0070.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0070.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0070.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0070.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0071.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0071.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0071.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0071.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0072.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0072.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0072.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0072.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0073.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0073.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0073.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0073.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0074.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0074.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0074.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0074.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0075.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0075.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0075.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0075.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0076.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0076.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0076.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0076.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0077.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0077.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0077.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0077.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0078.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0078.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0078.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0078.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0079.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0079.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0079.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0079.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0080.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0080.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0080.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0080.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0081.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0081.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0081.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0081.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0082.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0082.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0082.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0082.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0083.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0083.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0083.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0083.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0084.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0084.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0084.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0084.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0085.mtl">
+    <Content Include="Animations\Idlew\IdleAnimation0085.mtl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Animations\Idle\IdleAnimation0085.obj">
+    <Content Include="Animations\Idlew\IdleAnimation0085.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0001.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0001.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0002.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0002.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0003.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0003.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0004.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0004.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0005.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0005.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0006.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0006.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0007.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0007.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0008.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0008.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0009.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0009.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0010.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0010.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0011.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0011.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0012.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0012.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0013.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0013.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0014.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0014.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0015.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0015.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0016.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0016.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0017.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0017.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0018.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0018.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0019.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0019.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0020.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0020.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0021.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0021.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0022.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0022.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0023.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0023.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0024.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0024.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0025.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0025.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0026.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0026.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0027.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0027.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0028.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0028.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0029.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0029.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0030.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0030.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0031.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0031.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0032.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0032.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0033.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0033.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0034.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0034.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0035.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0035.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0036.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0036.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0037.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0037.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0038.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0038.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0039.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0039.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0040.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0040.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0041.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0041.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0042.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0042.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0043.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0043.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0044.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0044.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0045.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0045.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0046.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0046.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0047.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0047.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0048.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0048.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0049.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0049.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0050.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0050.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0051.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0051.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0052.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0052.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0053.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0053.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0054.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0054.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0055.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0055.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0056.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0056.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0057.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0057.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0058.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0058.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0059.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Animations\Idle\playerIdleAnimation0059.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Animations\Walk\WalkAnimation0001.mtl">
@@ -1102,6 +1457,9 @@
     <Content Include="plotTexture.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="secondHint.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="secondNpcIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1208,6 +1566,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="thirdNpcObject0001.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="thirdQuestFirstHint.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="thirdQuestSecondHint.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="treasure.png">

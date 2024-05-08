@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using System.Runtime.InteropServices;
 using SharpDX;
 using SharpDX.DXGI;
@@ -11,9 +7,9 @@ using SharpDX.Direct3D11;
 using SharpDX.Direct3D;
 using Buffer11 = SharpDX.Direct3D11.Buffer;
 using Device11 = SharpDX.Direct3D11.Device;
-using Lab01;
+using QuestGame.Graphics;
 
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
     class Renderer : IDisposable
     {
@@ -61,13 +57,15 @@ namespace QuestGame
         private Buffer11 _perObjectPixelShaderConstantBufferObject;
 
         private LightConstantBuffer _lightConstantBuffer;
-        //private Buffer11 _lightConstantBufferObject;
 
         private ConstantBuffer<LightConstantBuffer> _lightConstantBufferObject;
-        // private Buffer11 _materialPropertiesConstantBufferObject;
 
         private SamplerState _anisotropicSampler;
-        public SamplerState AnisotropicSampler { get => _anisotropicSampler; }
+
+        public SamplerState AnisotropicSampler
+        {
+            get => _anisotropicSampler;
+        }
 
         public Renderer(DirectX3DGraphics directX3DGraphics)
         {
@@ -75,10 +73,12 @@ namespace QuestGame
             _device = _directX3DGraphics.Device;
             _deviceContext = _directX3DGraphics.DeviceContext;
 
-            CompilationResult vertexShaderByteCode = ShaderBytecode.CompileFromFile("vertex.hlsl", "vertexShader", "vs_5_0");
+            CompilationResult vertexShaderByteCode =
+                ShaderBytecode.CompileFromFile("vertex.hlsl", "vertexShader", "vs_5_0");
             _vertexShader = new VertexShader(_device, vertexShaderByteCode);
 
-            CompilationResult pixelShaderByteCode = ShaderBytecode.CompileFromFile("pixel.hlsl", "pixelShader", "ps_5_0");
+            CompilationResult pixelShaderByteCode =
+                ShaderBytecode.CompileFromFile("pixel.hlsl", "pixelShader", "ps_5_0");
             _pixelShader = new PixelShader(_device, pixelShaderByteCode);
 
             InputElement[] inputElements = new[]
@@ -98,21 +98,6 @@ namespace QuestGame
             _deviceContext.VertexShader.Set(_vertexShader);
             _deviceContext.PixelShader.Set(_pixelShader);
 
-            /*SamplerStateDescription samplerStateDescription =
-                new SamplerStateDescription
-                {
-                    Filter = Filter.Anisotropic,
-                    AddressU = TextureAddressMode.Clamp,
-                    AddressV = TextureAddressMode.Clamp,
-                    AddressW = TextureAddressMode.Clamp,
-                    MipLodBias = 0.0f,
-                    MaximumAnisotropy = 16,
-                    ComparisonFunction = Comparison.Never,
-                    BorderColor = new SharpDX.Mathematics.Interop.RawColor4(
-                        1.0f, 1.0f, 1.0f, 1.0f),
-                    MinimumLod = 0,
-                    MaximumLod = float.MaxValue
-                };*/
             SamplerStateDescription samplerStateDescription =
                 new SamplerStateDescription
                 {
@@ -137,9 +122,9 @@ namespace QuestGame
             _perObjectConstantBufferObject = new Buffer11(
                 _device,
                 Utilities.SizeOf<PerObjectConstantBuffer>(),
-                ResourceUsage.Dynamic, // was dynamic
+                ResourceUsage.Dynamic,
                 BindFlags.ConstantBuffer,
-                CpuAccessFlags.Write, // 0 ?
+                CpuAccessFlags.Write,
                 ResourceOptionFlags.None,
                 0);
 
@@ -152,35 +137,7 @@ namespace QuestGame
                 ResourceOptionFlags.None,
                 0);
 
-            /*BufferDescription desc = new BufferDescription();
-
-            desc.Usage = ResourceUsage.Dynamic;
-            desc.BindFlags = BindFlags.ConstantBuffer;
-            desc.CpuAccessFlags = CpuAccessFlags.Write;
-            desc.OptionFlags = ResourceOptionFlags.None;
-            desc.StructureByteStride = 0;
-            desc.SizeInBytes = ;*/
-
-            var size = Marshal.SizeOf<LightConstantBuffer>();
-
-            var tstSize = Utilities.SizeOf<Vector4>() * 2 + Utilities.SizeOf<Light>() * 4;
-
-            /*_lightConstantBufferObject = new Buffer11(
-                _device,
-                tstSize,
-                ResourceUsage.Dynamic,
-                BindFlags.ConstantBuffer,
-                CpuAccessFlags.Write,
-                ResourceOptionFlags.None,
-                0);*/
             _lightConstantBufferObject = new ConstantBuffer<LightConstantBuffer>(_device);
-        }
-
-
-
-        public void CreateLightBuffer(LightProperties lightProperties)
-        {
-            //_lightConstantBufferObject = Buffer11.Create(_directX3DGraphics.Device, BindFlags.ConstantBuffer, );
         }
 
         public void SetLightConstantBuffer(LightProperties lightProperties)
@@ -192,8 +149,6 @@ namespace QuestGame
         public void SetPerObjectConstantBuffer(MaterialProperties materialProperties)
         {
             _perObjectPixelShaderConstantBuffer.MaterialProperties = materialProperties;
-            /*_perObjectConstantBuffer.time = time;
-            _perObjectConstantBuffer.timeScaling = timeScaling;*/
         }
 
         public void BeginRender()
@@ -203,57 +158,30 @@ namespace QuestGame
 
         public void UpdatePerObjectConstantBuffers(Matrix world, Matrix view, Matrix projection)
         {
-
             _perObjectConstantBuffer.WorldMatrix = world;
 
             _perObjectConstantBuffer.InverseTransposeWorldMatrix = Matrix.Transpose(Matrix.Invert(world));
-            //_perObjectConstantBuffer.InverseTransposeWorldMatrix.Invert();
-            //_perObjectConstantBuffer.InverseTransposeWorldMatrix.Transpose();
 
             Matrix viewProjectionMatrix = view * projection;
 
-            _perObjectConstantBuffer.WorldViewProjectionMatrix = world * viewProjectionMatrix; //Matrix.Multiply(Matrix.Multiply(world, view), projection);
-            //_perObjectConstantBuffer.WorldViewProjectionMatrix.Transpose();
-          
-            _deviceContext.MapSubresource(_perObjectConstantBufferObject, MapMode.WriteDiscard, SharpDX.Direct3D11.MapFlags.None, out DataStream dataStream);
+            _perObjectConstantBuffer.WorldViewProjectionMatrix = world * viewProjectionMatrix;
+
+            _deviceContext.MapSubresource(_perObjectConstantBufferObject, MapMode.WriteDiscard,
+                SharpDX.Direct3D11.MapFlags.None, out DataStream dataStream);
             dataStream.Write(_perObjectConstantBuffer);
             _deviceContext.UnmapSubresource(_perObjectConstantBufferObject, 0);
             _deviceContext.VertexShader.SetConstantBuffer(0, _perObjectConstantBufferObject);
 
-            _deviceContext.MapSubresource(_perObjectPixelShaderConstantBufferObject, MapMode.WriteDiscard, SharpDX.Direct3D11.MapFlags.None, out DataStream pixelDataStream);
+            _deviceContext.MapSubresource(_perObjectPixelShaderConstantBufferObject, MapMode.WriteDiscard,
+                SharpDX.Direct3D11.MapFlags.None, out DataStream pixelDataStream);
             pixelDataStream.Write(_perObjectPixelShaderConstantBuffer);
             _deviceContext.UnmapSubresource(_perObjectPixelShaderConstantBufferObject, 0);
             _deviceContext.PixelShader.SetConstantBuffer(0, _perObjectPixelShaderConstantBufferObject);
-
-
-            /*_deviceContext.MapSubresource(_lightConstantBufferObject, MapMode.WriteDiscard, SharpDX.Direct3D11.MapFlags.None, out DataStream lightDataStream);
-            lightDataStream.Write(_lightConstantBuffer);
-            _deviceContext.UnmapSubresource(_lightConstantBufferObject, 0);
-            _deviceContext.PixelShader.SetConstantBuffer(1, _lightConstantBufferObject);*/
 
             _lightConstantBufferObject.UpdateValue(_lightConstantBuffer);
 
 
             _deviceContext.PixelShader.SetConstantBuffer(1, _lightConstantBufferObject.Buffer);
-
-
-            /*
-             * 
-            _perObjectConstantBuffer.WorldMatrix = world;
-            _perObjectConstantBuffer.InverseTransposeWorldMatrix = Matrix.Transpose(Matrix.Invert(world));
-            _perObjectConstantBuffer.WorldViewProjectionMatrix = Matrix.Multiply(Matrix.Multiply(world, view), projection);
-            _perObjectConstantBuffer.WorldViewProjectionMatrix.Transpose();
-          
-            _deviceContext.MapSubresource(_perObjectConstantBufferObject, MapMode.WriteDiscard, SharpDX.Direct3D11.MapFlags.None, out DataStream dataStream);
-            dataStream.Write(_perObjectConstantBuffer);
-            _deviceContext.UnmapSubresource(_perObjectConstantBufferObject, 0);
-            _deviceContext.VertexShader.SetConstantBuffer(0, _perObjectConstantBufferObject);
-
-            _deviceContext.MapSubresource(_perObjectPixelShaderConstantBufferObject, MapMode.WriteDiscard, SharpDX.Direct3D11.MapFlags.None, out dataStream);
-            dataStream.Write(_perObjectPixelShaderConstantBuffer);
-            _deviceContext.UnmapSubresource(_perObjectPixelShaderConstantBufferObject, 0);
-            _deviceContext.PixelShader.SetConstantBuffer(0, _perObjectPixelShaderConstantBufferObject);
-             */
         }
 
         public void EndRender()
@@ -291,7 +219,7 @@ namespace QuestGame
     }
 
     public class ConstantBuffer<T> : IDisposable
-    where T : struct
+        where T : struct
     {
         private readonly Device11 _device;
         private readonly Buffer11 _buffer;
@@ -306,8 +234,6 @@ namespace QuestGame
         {
             _device = device;
 
-            // If no specific marshalling is needed, can use
-            // SharpDX.Utilities.SizeOf<T>() for better performance.
             int size = Marshal.SizeOf(typeof(T));
 
             _buffer = new Buffer11(device, new BufferDescription
@@ -325,8 +251,6 @@ namespace QuestGame
 
         public void UpdateValue(T value)
         {
-            // If no specific marshalling is needed, can use 
-            // dataStream.Write(value) for better performance.
             Marshal.StructureToPtr(value, _dataStream.DataPointer, false);
 
             var dataBox = new DataBox(_dataStream.DataPointer, 0, 0);

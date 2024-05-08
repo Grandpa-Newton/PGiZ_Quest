@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using QuestGame;
-using SharpDX;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
     internal class SequentialQuest
     {
@@ -18,15 +16,7 @@ namespace Lab01
         {
             InteractableObjects = interactableObjects;
             RightInteractSequence = rightInteractSequence;
-            npc.OnStartingQuest += () =>
-            {
-                IsStarting = true;
-            };
-        }
-
-        public void AddToPlayerSequence(InteractableObject interactableObject)
-        {
-            
+            npc.OnStartingQuest += () => { IsStarting = true; };
         }
 
         public bool AddToPlayerSequence(int interactableObjectIndex)
@@ -37,6 +27,7 @@ namespace Lab01
                 if (RightInteractSequence.Count == PlayerInteractSequence.Count)
                 {
                     OnRightPlayerSequence?.Invoke();
+                    PlayerInteractSequence.Clear();
                 }
 
                 LastPlayerInteract = interactableObjectIndex;
@@ -47,33 +38,6 @@ namespace Lab01
                 PlayerInteractSequence.Clear();
                 return false;
             }
-        }
-
-        private bool CheckIfRightInteractSequence()
-        {
-            if (PlayerInteractSequence.Count != RightInteractSequence.Count)
-            {
-                for (int i = 0; i < PlayerInteractSequence.Count; i++)
-                {
-                    if (PlayerInteractSequence[i] != RightInteractSequence[i])
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-            
-            for (int i = 0; i < PlayerInteractSequence.Count; i++)
-            {
-                if (PlayerInteractSequence[i] != RightInteractSequence[i])
-                {
-                    return false;
-                }
-            }
-            
-            OnRightPlayerSequence?.Invoke();
-
-            return true;
         }
     }
 }

@@ -1,12 +1,7 @@
 ﻿using SharpDX;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct Light
@@ -30,6 +25,7 @@ namespace QuestGame
     {
         public Vector4 EyePosition;
         public Vector4 GlobalAmbient;
+
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
         public Light[] Lights;
     }

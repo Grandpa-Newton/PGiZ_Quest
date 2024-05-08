@@ -2,24 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using SharpDX;
 
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
     class Game3DObject
     {
         internal Vector4 _position;
-        public Vector4 Position { get => _position; }
+
+        public Vector4 Position
+        {
+            get => _position;
+        }
 
         internal float _yaw;
-        public float Yaw { get => _yaw; set => _yaw = value; }
+
+        public float Yaw
+        {
+            get => _yaw;
+            set => _yaw = value;
+        }
 
         internal float _pitch;
-        public float Pitch { get => _pitch; set => _pitch = value; }
+
+        public float Pitch
+        {
+            get => _pitch;
+            set => _pitch = value;
+        }
 
         internal float _roll;
-        public float Roll { get => _roll; set => _roll = value; }
+
+        public float Roll
+        {
+            get => _roll;
+            set => _roll = value;
+        }
 
         public Game3DObject(Vector4 position, float yaw = 0.0f, float pitch = 0.0f, float roll = 0.0f)
         {
@@ -53,7 +71,7 @@ namespace QuestGame
             LimitAngleByPlusMinusPi(ref _roll);
         }
 
-        public virtual void MoveBy(float deltaX, float deltaY, float deltaZ) 
+        public virtual void MoveBy(float deltaX, float deltaY, float deltaZ)
         {
             _position.X += deltaX;
             _position.Y += deltaY;
@@ -69,7 +87,8 @@ namespace QuestGame
 
         public Matrix GetWorldMatrix()
         {
-            return Matrix.Multiply(Matrix.RotationYawPitchRoll(_yaw, _pitch, _roll), Matrix.Translation((Vector3)_position));
+            return Matrix.Multiply(Matrix.RotationYawPitchRoll(_yaw, _pitch, _roll),
+                Matrix.Translation((Vector3)_position));
         }
     }
 }

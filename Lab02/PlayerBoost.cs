@@ -1,4 +1,4 @@
-﻿namespace Lab01
+﻿namespace QuestGame.Logic
 {
     public class PlayerBoost
     {

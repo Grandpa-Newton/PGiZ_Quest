@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab01;
 using ObjLoader.Loader.Common;
+using QuestGame.Graphics;
+using QuestGame.Infrastructure;
 using SharpDX;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
-    internal class InventoryItem<T> where T: Item
+    internal class InventoryItem<T> where T : Item
     {
         public T Item;
-        
+
         public bool IsActive = false;
         public bool IsHovered = false;
 
@@ -31,35 +34,31 @@ namespace Lab01
         public Vector2 CenterPosition;
 
 
-        public InventoryItem(DirectX3DGraphics directX3DGraphics, T item, Vector2 centerPosition, float angle, Vector2 defaultSize, float defaultBoxScale = 1f, float defaultItemScale = 1f)
+        public InventoryItem(DirectX3DGraphics directX3DGraphics, T item, Vector2 centerPosition, float angle,
+            Vector2 defaultSize, float defaultBoxScale = 1f, float defaultItemScale = 1f)
         {
-            
             _directX3DGraphics = directX3DGraphics;
 
-            
+
             if (item != null)
             {
-                /*SharpDX.Direct2D1.Bitmap itemBitmap =
-                    DirectX3DGraphics.LoadFromFile(directX3DGraphics.D2DRenderTarget, itemFileName);
-
-
-                _itemSprite = new Sprite(directX3DGraphics, itemBitmap, centerPosition, angle,
-                    defaultSize, defaultItemScale);*/
-
                 Item = item;
             }
-            
+
             Bitmap activeBoxBitmap = DirectX3DGraphics.LoadFromFile(directX3DGraphics.D2DRenderTarget, "activeBox.bmp");
 
             _activeBoxBitmap = activeBoxBitmap;
-            
+
+            float boxSize = 2.5f;
+
             _activeBox = new Sprite(directX3DGraphics, activeBoxBitmap, centerPosition, angle,
-                defaultSize, 2.5f * defaultBoxScale);
-            
-            Bitmap inactiveBoxBitmap = DirectX3DGraphics.LoadFromFile(directX3DGraphics.D2DRenderTarget, "inactiveBox.bmp");
-            
+                defaultSize, boxSize * defaultBoxScale);
+
+            Bitmap inactiveBoxBitmap =
+                DirectX3DGraphics.LoadFromFile(directX3DGraphics.D2DRenderTarget, "inactiveBox.bmp");
+
             _inactiveBox = new Sprite(directX3DGraphics, inactiveBoxBitmap, centerPosition, angle,
-                defaultSize, 2.5f * defaultBoxScale);
+                defaultSize, boxSize * defaultBoxScale);
 
             _defaultBoxScale = defaultBoxScale;
 
@@ -76,7 +75,8 @@ namespace Lab01
             {
                 _inactiveBox.Draw(1.0f);
             }
-            if(Item != null)
+
+            if (Item != null)
                 Item.Sprite.Draw(1.0f);
         }
 
@@ -88,19 +88,21 @@ namespace Lab01
         public bool CheckToMakeActive(Vector2 position)
         {
             bool isToMakeActive = CheckPosition(position);
-            
+
             IsActive = isToMakeActive || IsActive;
 
             return isToMakeActive;
         }
-        
-        
+
+
         private bool CheckPosition(Vector2 position)
         {
             float width = _directX3DGraphics.D2DRenderTarget.Size.Width / _activeBox.DefaultSize.X;
 
             Vector2 point1 = _activeBox.Translation;
-            Vector2 point2 = _inactiveBox.Translation + new Vector2(_activeBoxBitmap.Size.Width * width, _activeBoxBitmap.Size.Height * width) * 2.5f * _defaultBoxScale;
+            Vector2 point2 = _inactiveBox.Translation +
+                             new Vector2(_activeBoxBitmap.Size.Width * width, _activeBoxBitmap.Size.Height * width) *
+                             2.5f * _defaultBoxScale;
 
             if ((position.X >= point1.X && position.X <= point2.X) &&
                 (position.Y >= point1.Y && position.Y <= point2.Y))

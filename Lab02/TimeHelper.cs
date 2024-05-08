@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
 
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
     class TimeHelper
     {
@@ -13,17 +10,29 @@ namespace QuestGame
         private int _framesCounter = 0;
 
         private int _fps = 0;
-        public int FPS { get => _fps; }
+
+        public int FPS
+        {
+            get => _fps;
+        }
 
         private long _previousFPSMeasurementTime;
 
         private long _previousTicks;
 
         private float _time;
-        public float Time { get => _time; }
+
+        public float Time
+        {
+            get => _time;
+        }
 
         private float _deltaT;
-        public float DeltaT { get => _deltaT; }
+
+        public float DeltaT
+        {
+            get => _deltaT;
+        }
 
         public TimeHelper()
         {
@@ -50,7 +59,7 @@ namespace QuestGame
 
             _framesCounter++;
 
-            if(_stopwatch.ElapsedMilliseconds - _previousFPSMeasurementTime >= 1000)
+            if (_stopwatch.ElapsedMilliseconds - _previousFPSMeasurementTime >= 1000)
             {
                 _fps = _framesCounter;
                 _framesCounter = 0;

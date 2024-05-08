@@ -1,30 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using SharpDX;
 using SharpDX.Direct3D11;
 
-namespace QuestGame
+namespace QuestGame.Graphics
 {
     class Texture : IDisposable
     {
         private Texture2D _textureObject;
-        public Texture2D TextureObject { get => _textureObject; }
 
         private ShaderResourceView _shaderResourceView;
-        public ShaderResourceView ShaderResourceView { get => _shaderResourceView; }
+
+        public ShaderResourceView ShaderResourceView
+        {
+            get => _shaderResourceView;
+        }
 
         private int _width;
-        public int Width { get => _width; }
 
         private int _height;
-        public int Height { get => _height; }
 
         private SamplerState _samplerState;
-        public SamplerState SamplerState { get => _samplerState; }
-        
+
+        public SamplerState SamplerState
+        {
+            get => _samplerState;
+        }
+
         public Texture(Texture2D textureObject, ShaderResourceView shaderResourceView,
             int width, int height, SamplerState samplerState)
         {

@@ -8,19 +8,14 @@ sampler Sampler : register(s0);
 
 struct _Material
 {
-    float4  Emissive;       // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float4  Ambient;        // 16 bytes
-    //------------------------------------(16 byte boundary)
-    float4  Diffuse;        // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float4  Specular;       // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float   SpecularPower;  // 4 bytes
-    bool    UseTexture;     // 4 bytes
-    float2  Padding;        // 8 bytes
-    //----------------------------------- (16 byte boundary)
-};  // Total:               // 80 bytes ( 5 * 16 )
+    float4  Emissive;
+    float4  Ambient;
+    float4  Diffuse;
+    float4  Specular;
+    float   SpecularPower;
+    bool    UseTexture;
+    float2  Padding;
+};
 
 cbuffer MaterialProperties : register(b0)
 {
@@ -29,31 +24,24 @@ cbuffer MaterialProperties : register(b0)
 
 struct Light
 {
-    float4      Position;               // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float4      Direction;              // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float4      Color;                  // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float       SpotAngle;              // 4 bytes
-    float       ConstantAttenuation;    // 4 bytes
-    float       LinearAttenuation;      // 4 bytes
-    float       QuadraticAttenuation;   // 4 bytes
-    //----------------------------------- (16 byte boundary)
-    int         LightType;              // 4 bytes
-    bool        Enabled;                // 4 bytes
-    int2        Padding;                // 8 bytes
-    //----------------------------------- (16 byte boundary)
-};  // Total:                           // 80 bytes (5 * 16 byte boundary)
+    float4      Position;
+    float4      Direction;
+    float4      Color;
+    float       SpotAngle;              
+    float       ConstantAttenuation;
+    float       LinearAttenuation;
+    float       QuadraticAttenuation;
+    int         LightType; 
+    bool        Enabled;
+    int2        Padding;
+};
 
 cbuffer LightProperties : register(b1)
 {
-    float4 EyePosition;                 // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    float4 GlobalAmbient;               // 16 bytes
-    //----------------------------------- (16 byte boundary)
-    Light Lights[MAX_LIGHTS];           // 80 * 8 = 640 bytes
-};  // Total:                           // 672 bytes (42 * 16 byte boundary)
+    float4 EyePosition;
+    float4 GlobalAmbient;
+    Light Lights[MAX_LIGHTS];
+};
 
 float4 DoDiffuse(Light light, float3 L, float3 N)
 {
@@ -63,11 +51,9 @@ float4 DoDiffuse(Light light, float3 L, float3 N)
 
 float4 DoSpecular(Light light, float3 V, float3 L, float3 N, float k, float3 T)
 {
-    // Phong lighting.
     float3 R = normalize(reflect(-L, N));
     float RdotV = max(0, dot(R, V));
 
-    // Blinn-Phong lighting
     float3 H = normalize(L + V);
     float NdotH = max(0, dot(N, H));
     float NdotH2 = NdotH * NdotH;
@@ -76,7 +62,7 @@ float4 DoSpecular(Light light, float3 V, float3 L, float3 N, float k, float3 T)
 
     float ward = exp(-((k * (1.0 - NdotH2) / NdotH2) * ((k * (1.0 - NdotH2) / NdotH2))));
 
-    return light.Color * pow(ward, Material.SpecularPower);   // RdotV
+    return light.Color * pow(ward, Material.SpecularPower);
 }
 
 float DoAttenuation(Light light, float d)
@@ -164,58 +150,30 @@ struct PixelShaderInput
 
 float4 pixelShader(PixelShaderInput IN) : SV_TARGET
 {
-    const float k = 10.0;
+    /*const float k = 10.0;
 
     LightingResult lit = ComputeLighting(IN.PositionWS, normalize(IN.NormalWS), k, IN.TMatrix);
 
     float4 emissive = Material.Emissive;
     float4 ambient = Material.Ambient * GlobalAmbient;
     float4 diffuse = Material.Diffuse * lit.Diffuse;
-    float4 specular = Material.Specular * lit.Specular;
+    float4 specular = Material.Specular * lit.Specular;*/
 
-    float4 texColor = { 0, 0, 1, 1 };   // 1, 1, 1, 1
+    float4 texColor = Texture.Sample(Sampler, IN.TexCoord);
 
-    float4 color = { 1, 0, 0, 1 };
+    return texColor;
+
+    /*float4 color = { 1, 0, 0, 1 };
 
     if (Material.UseTexture)
     {
-        texColor = Texture.Sample(Sampler, IN.TexCoord);
+        
         return texColor;
     }
 
     float4 finalColor = (emissive + ambient + diffuse + specular) * texColor;
 
 
-    return finalColor;
+    return finalColor;*/
 
 }
-/*
-const vec4  diffColor = vec4 ( 0.5, 0.0, 0.0, 1.0 );
-    const vec4  specColor = vec4 ( 0.7, 0.7, 0.0, 1.0 );
-    const float specPower = 30.0;
-
-    vec3 n2   = normalize ( n );
-    vec3 l2   = normalize ( l );
-    vec3 v2   = normalize ( v );
-    vec3 r    = reflect ( -v2, n2 );
-    vec4 diff = diffColor * max ( dot ( n2, l2 ), 0.0 );
-    vec4 spec = specColor * pow ( max ( dot ( l2, r ), 0.0 ), specPower );
-
-    gl_FragColor = diff + spec;
-*/
-
-/*struct pixelData
-{
-	float4 position		: SV_POSITION;
-	float2 texCoord0    : TEXCOORD0;
-};
-
-Texture2D meshTexture : register(t0);
-sampler	  meshSampler : register(s0);
-
-float4 pixelShader(pixelData input) : SV_Target
-{
-	float4 texColor = {1, 1, 1, 1};
-	texColor = meshTexture.Sample(meshSampler, input.texCoord0);
-	return texColor;
-}	  */

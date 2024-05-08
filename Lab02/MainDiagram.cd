@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab01.Animation" Collapsed="true">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAACAAEIAAAAACAAgAAAAAACAAAAQA=</HashCode>
+      <FileName>Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.CollectibleItem" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.DialogueVisual" Collapsed="true">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>DialogueVisual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.InteractableObject" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAQ=</HashCode>
+      <FileName>InteractableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.Inventory&lt;T&gt;" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAEAoAAIAAAAAAAAACBkAAAQABMAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.InventoryItem&lt;T&gt;" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACABAAIAAEBFAAAAFAACEAAJAEAAAAAAAAAA=</HashCode>
+      <FileName>InventoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.Item" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.MainInventoryItem" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.Npc" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAJAAAAACIAAAQAIIEAABCAABABQEIAAAA=</HashCode>
+      <FileName>Npc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.NpcResponse" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Npc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.PlayerBoost" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>PlayerBoost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.SequentialQuest" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAQAAAACIAAAAAAAAAACABAAAAAAg=</HashCode>
+      <FileName>SequentialQuest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab01.Sprite" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iAAAACAAAQAAAgGCABAAAAABAIAAAAgACEAAAAAAABA=</HashCode>
+      <FileName>Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGame.Camera" Collapsed="true">
+    <Position X="2" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAEAAABAAAEAABCAAAAgAAAAAAAAAACA=</HashCode>
+      <FileName>Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGame.ConstantBuffer&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgACAACAAAAAAAAAAAAAAAhAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Renderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.DirectX3DGraphics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACCYqCEEACIAAwwAAAIEAAQCUMAGiIAAAgDCCQEBEIA=</HashCode>
+      <FileName>DirectX3DGraphics.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.DXInput" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwBAAAAACAAIAAAAAUAAAAAAACAQAAAECAAEgAmAAA=</HashCode>
+      <FileName>DXInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.Game" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KmK0bgsoDSHV4AMDEJAaeAJBmwFJCgVBGcABYilJARY=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.Game3DObject" Collapsed="true">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAEAAAAAEgACAAAAAAAAAIAAIgAABAgIAAIBA=</HashCode>
+      <FileName>Game3DObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGame.Loader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAIAKAAAAAAAAAAAAABAAIEAAAgAAAAAAQEAAA=</HashCode>
+      <FileName>Loader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.MeshObject" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIEQAACAACAAAAIAAAAAFBACAQIgAQAgAEAAAAAA=</HashCode>
+      <FileName>MeshObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuestGame.Renderer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAACCQIAAAAgEAAhAAJQCgKgmAAAAAIACIAAAE=</HashCode>
+      <FileName>Renderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.Program" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGame.Texture" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCCIAABAAAAAAkAAABAAEAAAAAAAAIEAAAA=</HashCode>
+      <FileName>Texture.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="QuestGame.TimeHelper" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAwAAAAAEAAgBAAAACAAAAAQAAAABAAAAAEAAAAAIQA=</HashCode>
+      <FileName>TimeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

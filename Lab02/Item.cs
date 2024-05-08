@@ -1,6 +1,7 @@
 ﻿using System;
+using QuestGame.Graphics;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
     internal abstract class Item
     {
@@ -8,25 +9,29 @@ namespace Lab01
         {
             Sprite = sprite;
         }
+
         public Sprite Sprite;
     }
 
     internal class MainInventoryItem : Item
     {
-        private Func<MainInventoryItem, bool> interactFunction;
+        private Func<MainInventoryItem, bool> _interactFunction;
+
         public MainInventoryItem(Sprite sprite, Func<MainInventoryItem, bool> interactFunction) : base(sprite)
         {
-            this.interactFunction = interactFunction;
+            this._interactFunction = interactFunction;
         }
+
         public bool Interact()
         {
-            return interactFunction.Invoke(this);
+            return _interactFunction.Invoke(this);
         }
     }
-    
+
     internal class CollectibleItem : Item
     {
         public string Description;
+
         public CollectibleItem(Sprite sprite, string description) : base(sprite)
         {
             Description = description;

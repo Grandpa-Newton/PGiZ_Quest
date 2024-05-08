@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Runtime.CompilerServices;
+using Lab01;
 using ObjLoader.Loader.Loaders;
-using QuestGame;
+using QuestGame.Infrastructure;
 using SharpDX;
 using SharpDX.Direct3D11;
 
-namespace Lab01
+namespace QuestGame.Graphics
 {
     internal class Animation
     {
@@ -14,7 +14,8 @@ namespace Lab01
 
         public List<MeshObject> MeshObjects = new List<MeshObject>();
 
-        public Texture texture;
+        public Texture Texture;
+
         public void Load(string directoryPath, Loader loader, SamplerState samplerState, float sizeMultiplier = 1f)
         {
             ObjLoaderFactory objLoaderFactory;
@@ -32,7 +33,8 @@ namespace Lab01
                 fileStream = new FileStream(animationFiles[i], FileMode.Open);
                 result = objLoader.Load(fileStream);
 
-                MeshObjects.Add(loader.LoadMeshObjectFromObjFile(result, Vector4.Zero, 0f, 0f, 0f, ref texture, samplerState,
+                MeshObjects.Add(loader.LoadMeshObjectFromObjFile(result, Vector4.Zero, 0f, 0f, 0f, ref Texture,
+                    samplerState,
                     sizeMultiplier));
             }
         }
@@ -44,7 +46,7 @@ namespace Lab01
 
         public void ContinueAnimation()
         {
-            if(CurrentMesh + 1 >= MeshObjects.Count)
+            if (CurrentMesh + 1 >= MeshObjects.Count)
                 CurrentMesh = 0;
             else
             {

@@ -16,7 +16,7 @@ struct VertexShaderOutput
 {
     float4 PositionWS   : TEXCOORD1;
     float4 NormalWS     : TEXCOORD2;
-    float2 TexCoord     : TEXCOORD0;             // l h v n
+    float2 TexCoord     : TEXCOORD0;
     float3 TMatrix      : TEXCOORD3;
     float4 Position     : SV_Position;
 };

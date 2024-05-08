@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
+using QuestGame.Logic;
 using SharpDX.Direct3D;
 using Device11 = SharpDX.Direct3D11.Device;
 
-namespace QuestGame
+namespace QuestGame.Infrastructure
 {
     internal static class Program
     {
@@ -15,7 +14,7 @@ namespace QuestGame
         [STAThread]
         static void Main()
         {
-            if(!(Device11.GetSupportedFeatureLevel() == FeatureLevel.Level_11_0))
+            if (!(Device11.GetSupportedFeatureLevel() == FeatureLevel.Level_11_0))
             {
                 MessageBox.Show("DirectX11 Not Supported");
                 return;

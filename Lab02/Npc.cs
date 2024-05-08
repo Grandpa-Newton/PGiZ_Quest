@@ -1,7 +1,8 @@
 ﻿using System;
-using QuestGame;
+using QuestGame.Graphics;
+using QuestGame.Infrastructure;
 
-namespace Lab01
+namespace QuestGame.Logic
 {
     internal class Npc
     {
@@ -13,9 +14,8 @@ namespace Lab01
         public Sprite IconSprite;
         public string Name;
 
-
         public Action OnStartingQuest;
-        
+
         public NpcStates NpcState;
 
         public MainInventoryItem[] GivingItems;
@@ -35,11 +35,11 @@ namespace Lab01
                     NpcState = NpcStates.AfterGivingQuest;
                     OnStartingQuest?.Invoke();
                     break;
-                
+
                 case NpcStates.AfterGivingQuest:
                     npcResponse = new NpcResponse(null, RepeatedInteractText);
                     break;
-                
+
                 case NpcStates.AfterQuestComplete:
                     npcResponse = new NpcResponse(TakenItems, InteractTextAfterComplete, PlayerBoost);
                     break;
@@ -64,7 +64,8 @@ namespace Lab01
         }
 
         public Npc(MeshObject gameObject, string firstInteractText, string repeatedInteractText,
-            string interactTextAfterComplete, string interactTextAfterGivingItems, ref Action questCompleteAction, Sprite iconSprite,
+            string interactTextAfterComplete, string interactTextAfterGivingItems, ref Action questCompleteAction,
+            Sprite iconSprite,
             string name, MainInventoryItem[] givingItems = null, CollectibleItem[] givingCollectibles = null,
             MainInventoryItem[] takenItems = null, PlayerBoost playerBoost = null)
         {
@@ -92,7 +93,7 @@ namespace Lab01
             }
 
             PlayerBoost = playerBoost;
-            
+
             questCompleteAction += QuestComplete;
         }
 
@@ -112,7 +113,7 @@ namespace Lab01
         public MainInventoryItem[] Items;
         public string ResponseText;
         public PlayerBoost PlayerBoost;
-        
+
 
         public NpcResponse(MainInventoryItem[] items, string responseText, PlayerBoost playerBoost = null)
         {
@@ -121,7 +122,7 @@ namespace Lab01
             this.PlayerBoost = playerBoost;
         }
     }
-    
+
     public enum NpcStates
     {
         BeforeGivingQuest = 0,

@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\maindiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:maindiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|c:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u043F\u0433\u0438\u0437\\coursework\\lab02\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6946C71-53D6-4A7B-8B2E-C3540BA1D523}|CourseWork.csproj|solutionrelative:inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 93,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +66,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InventoryItem.cs",
-              "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\InventoryItem.cs",
-              "RelativeDocumentMoniker": "InventoryItem.cs",
-              "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\InventoryItem.cs",
-              "RelativeToolTip": "InventoryItem.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBoAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T09:06:31.654Z",
+              "DocumentIndex": 0,
+              "Title": "MainDiagram.cd",
+              "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\MainDiagram.cd",
+              "RelativeDocumentMoniker": "MainDiagram.cd",
+              "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\MainDiagram.cd",
+              "RelativeToolTip": "MainDiagram.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-05-07T22:25:51.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DirectX3DGraphics.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\DirectX3DGraphics.cs",
               "RelativeDocumentMoniker": "DirectX3DGraphics.cs",
@@ -88,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Sprite.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Sprite.cs",
               "RelativeDocumentMoniker": "Sprite.cs",
@@ -101,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Inventory.cs",
               "RelativeDocumentMoniker": "Inventory.cs",
@@ -114,20 +117,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Game.cs",
               "RelativeDocumentMoniker": "Game.cs",
               "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Game.cs",
               "RelativeToolTip": "Game.cs",
-              "ViewState": "AQIAAP8BAAAAAAAAAAAuwB4CAAAJAAAA",
+              "ViewState": "AQIAAP8BAAAAAAAAAAAuwB4CAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T08:31:59.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "InventoryItem.cs",
+              "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\InventoryItem.cs",
+              "RelativeDocumentMoniker": "InventoryItem.cs",
+              "ToolTip": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\InventoryItem.cs",
+              "RelativeToolTip": "InventoryItem.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBoAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T09:06:31.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Camera.cs",
               "RelativeDocumentMoniker": "Camera.cs",
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "pixel.hlsl",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\pixel.hlsl",
               "RelativeDocumentMoniker": "pixel.hlsl",
@@ -148,12 +164,11 @@
               "RelativeToolTip": "pixel.hlsl",
               "ViewState": "AQIAAKEAAAAAAAAAAAAAALcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2024-03-25T17:01:34.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-25T17:01:34.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Loader.cs",
               "DocumentMoniker": "C:\\\u0443\u043D\u0438\u0432\u0435\u0440\\\u041F\u0413\u0438\u0417\\CourseWork\\Lab02\\Loader.cs",
               "RelativeDocumentMoniker": "Loader.cs",

@@ -1,18 +1,11 @@
-﻿using QuestGame;
-using SharpDX;
+﻿using SharpDX;
 using SharpDX.Direct2D1;
-using SharpDX.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QuestGame.Infrastructure;
 
-namespace Lab01
+namespace QuestGame.Graphics
 {
     internal class Sprite
     {
-
         private DirectX3DGraphics _directX3DGraphics;
 
         Bitmap _bitmap;
@@ -48,7 +41,7 @@ namespace Lab01
             get => _translation;
             set => _translation = value;
         }
-        
+
         private float _defaultScale;
 
         public float DefaultScale
@@ -57,9 +50,8 @@ namespace Lab01
             set => _defaultScale = value;
         }
 
-        private static readonly float _pu = 1.0f;
-
-        public Sprite(DirectX3DGraphics directX3DGraphics, Bitmap bitmap, Vector2 centerPosition, float angle, Vector2 defaultSize, float defaultScale)
+        public Sprite(DirectX3DGraphics directX3DGraphics, Bitmap bitmap, Vector2 centerPosition, float angle,
+            Vector2 defaultSize, float defaultScale)
         {
             _directX3DGraphics = directX3DGraphics;
             _bitmap = bitmap;
@@ -71,7 +63,6 @@ namespace Lab01
 
         public void Draw(float opacity = 1.0f)
         {
-
             Vector2 center;
 
             center.X = _bitmap.Size.Width / 2f;
@@ -80,19 +71,18 @@ namespace Lab01
             float width = _directX3DGraphics.D2DRenderTarget.Size.Width / _defaultSize.X;
             float height = _directX3DGraphics.D2DRenderTarget.Size.Height / _defaultSize.Y;
 
-            _translation.X = (-center.X * _pu * _defaultScale + _centerPosition.X) * width;
-            _translation.Y = _directX3DGraphics.D2DRenderTarget.Size.Height - (center.Y * _pu * _defaultScale + _centerPosition.Y) * height;
+            _translation.X = (-center.X * _defaultScale + _centerPosition.X) * width;
+            _translation.Y = _directX3DGraphics.D2DRenderTarget.Size.Height -
+                             (center.Y * _defaultScale + _centerPosition.Y) * height;
 
             var transform = _directX3DGraphics.D2DRenderTarget.Transform;
-            //new Vector2(, );
 
-            //_directX3DGraphics.D2DRenderTarget.Transform = Matrix3x2.Translation(_renderForm.Width / 2f, _renderForm.Height/2f);
             _directX3DGraphics.D2DRenderTarget.Transform = Matrix3x2.Rotation(-_angle, center) *
-                Matrix3x2.Scaling(width * _pu * _defaultScale, width * _pu * _defaultScale, Vector2.Zero) *
-                Matrix3x2.Translation(_translation);
-            _directX3DGraphics.D2DRenderTarget.DrawBitmap(_bitmap, opacity, SharpDX.Direct2D1.BitmapInterpolationMode.Linear);
+                                                           Matrix3x2.Scaling(width * _defaultScale,
+                                                               width * _defaultScale, Vector2.Zero) *
+                                                           Matrix3x2.Translation(_translation);
+            _directX3DGraphics.D2DRenderTarget.DrawBitmap(_bitmap, opacity, BitmapInterpolationMode.Linear);
             _directX3DGraphics.D2DRenderTarget.Transform = transform;
-
         }
 
         public Sprite Clone()
